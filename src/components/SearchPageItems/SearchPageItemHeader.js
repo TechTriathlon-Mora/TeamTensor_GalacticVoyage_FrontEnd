@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import ArrowDropDownCircleOutlinedIcon from "@mui/icons-material/ArrowDropDownCircleOutlined";
-import FlightTakeoffRoundedIcon from '@mui/icons-material/FlightTakeoffRounded';
+import FlightTakeoffRoundedIcon from "@mui/icons-material/FlightTakeoffRounded";
 
 const SearchPageItemHeader = () => {
   return (
@@ -15,7 +15,7 @@ const SearchPageItemHeader = () => {
           justifyContent: "center",
         }}
       >
-        <FlightTakeoffRoundedIcon sx={{ color: "white" }} />
+        <FlightTakeoffRoundedIcon sx={{ color: "white", fontSize: "2rem" }} />
         <Typography
           sx={{
             color: "white",
@@ -28,7 +28,6 @@ const SearchPageItemHeader = () => {
         </Typography>
         <ArrowDropDownCircleOutlinedIcon sx={{ color: "white" }} />
       </Box>
-      
     </HeaderWrapper>
   );
 };
@@ -40,5 +39,3 @@ const HeaderWrapper = styled.div`
   align-items: center;
   margin: 0 auto;
 `;
-
-
