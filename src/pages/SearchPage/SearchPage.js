@@ -12,7 +12,7 @@ const SearchPage= () => {
 export default SearchPage;
 
 const SearchPageWrapper = styled.div`
-    min-height: 100vh;
+    height: auto;
     /* width: 100%; */
     background-color: #000000;
 `;

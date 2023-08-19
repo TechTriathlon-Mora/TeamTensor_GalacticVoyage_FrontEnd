@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import ItemStepper from "../SearchPageItems/SearchPageItemStepper";
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
+import BookingItemHeader from "./BookingHeader";
+import BookingDetails from "./BookingDetails";
 
 const BookingPageItem = () => {
   let navigate = useNavigate();
@@ -11,9 +13,15 @@ const BookingPageItem = () => {
     <BookingWrapper><br/><br/><br/><br/>
       <BookingStepperWrapper>
       <ItemStepper initialStep={1} />
-      </BookingStepperWrapper>
+      </BookingStepperWrapper><br/>
+      <BooingHeaderWrapper>
+        <BookingItemHeader />
+      </BooingHeaderWrapper><br/>
+      <BookingDetailsWrapper>
+        <BookingDetails />
+      </BookingDetailsWrapper>
 
-      <BookingText>hello</BookingText>
+      <BookingText>hellov</BookingText>
       {activeStep === 1 && (
         <Button
           onClick={() => {
@@ -41,6 +49,20 @@ const BookingStepperWrapper = styled.div`
     /* padding-top: 10vh; */
     background-color: rgba(255, 255, 255, 0.25);
     backdrop-filter: blur(5rem);
+`;
+
+const BooingHeaderWrapper = styled.div`
+  width: 100%;
+  padding: 1.5vh 0 1.5vh 0;
+  background-color: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(5rem);
+`;
+
+const BookingDetailsWrapper = styled.div`
+  width: 100%;
+  padding: 1.5vh 0 1.5vh 0;
+  /* background-color: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(5rem); */
 `;
 
 const BookingText = styled.h1`

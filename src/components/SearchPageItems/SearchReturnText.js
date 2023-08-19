@@ -2,7 +2,7 @@ import React from "react";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 
-const SearchDepartureText = () => {
+const SearchReturnText = () => {
   return (
     <Box>
       <Typography
@@ -27,7 +27,7 @@ const SearchDepartureText = () => {
           fontWeight: "bold",
         }}
       >
-        Departure Space Flight
+        Return Space Flight
       </Typography>
       <Typography
         sx={{
@@ -39,9 +39,9 @@ const SearchDepartureText = () => {
           textAlign: "center",
         }}
       >
-        Earth <span style={{ color: "#FFF" }}>to</span> Mars
+        Mars <span style={{ color: "#FFF" }}>to</span> Earth
       </Typography>
     </Box>
   );
 };
-export default SearchDepartureText;
+export default SearchReturnText;

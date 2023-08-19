@@ -4,11 +4,15 @@ import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
 import SearchPageItemHeader from "./SearchPageItemHeader";
 import SearchDepartureText from "./SearchDepartureText";
+import SearchFilterBar from "./SearchFilterBar";
+import SearchDepartureCards from "./SearchDepartureCard";
+import SearchReturnCards from "./SearchReturnCard";
+import SearchReturnText from "./SearchReturnText";
+import CustomButton from "./CustomButton";
 
 const SearchPageItem = () => {
   let navigate = useNavigate();
   const [activeStep, setActiveStep] = useState(0);
-
   return (
     <SearchWrapper>
       <br />
@@ -17,23 +21,42 @@ const SearchPageItem = () => {
       <br />
       <SearchStepperWrapper>
         <ItemStepper initialStep={0} />
-      </SearchStepperWrapper><br/>
+      </SearchStepperWrapper>
+      <br />
       <SearchHeaderWrapper>
-          <SearchPageItemHeader />
+        <SearchPageItemHeader />
       </SearchHeaderWrapper>
-      
+
       <SearchDepartureText />
+      <SearchFilterBar />
+      <SearchDepartureCardsWrapper>
+        <SearchDepartureCards />
+      </SearchDepartureCardsWrapper>
+      <SearchReturnText />
+      <SearchFilterBar />
+      <SearchReturnCardsWrapper>
+        <SearchReturnCards />
+      </SearchReturnCardsWrapper>
       {/* <SearchText>hello</SearchText> */}
-      {activeStep === 0 && (
-        <Button
-          onClick={() => {
-            setActiveStep(1);
-            navigate("/bookingpage");
-          }}
-        >
-          Continue
-        </Button>
-      )}
+      <SearchButton>
+        {activeStep === 0 && (
+          <CustomButton
+          textAlign="flex-end"
+          justifyContent="flex-end"
+          alignItems="flex-end"
+            backgroundColor="#FFB800"
+            textColor="#000000"
+           
+            marginTop="2rem"
+            onClick={() => {
+              setActiveStep(1);
+              navigate("/bookingpage");
+            }}
+          >
+            Continue
+          </CustomButton>
+        )}
+      </SearchButton><br/><br/><br/>
     </SearchWrapper>
   );
 };
@@ -55,17 +78,29 @@ const SearchStepperWrapper = styled.div`
 
 const SearchHeaderWrapper = styled.div`
   width: 100%;
-   padding: 4vh 0 4vh 0; 
+  padding: 4vh 0 4vh 0;
   background-color: rgba(255, 255, 255, 0.25);
   backdrop-filter: blur(5rem);
-
 `;
 
-const SearchText = styled.h1`
-  padding-top: 20vh;
-  color: white;
+const SearchDepartureCardsWrapper = styled.div`
+  width: 100%;
+  margin: 0 auto;
 `;
 
+const SearchReturnCardsWrapper = styled.div`
+  width: 100%;
+  margin: 0 auto;
+`;
+
+const SearchButton = styled.div`
+  align-items: flex-end;
+  text-align: flex-end;
+  justify-content: flex-end;
+  padding: 1rem 0rem 0 1rem;
+
+  
+`;
 const Button = styled.button`
   background-color: #000000;
   color: white;
