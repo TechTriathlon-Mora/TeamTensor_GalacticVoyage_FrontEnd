@@ -5,6 +5,8 @@ import { useNavigate } from "react-router-dom";
 import BookingItemHeader from "./BookingHeader";
 import BookingDetails from "./BookingDetails";
 import BookingContactDetails from "./BookingContactDetails";
+import BookingAdditionalServices from "./BookingAdditionalServices";
+import CustomButton from "../SearchPageItems/CustomButton";
 
 const BookingPageItem = () => {
   let navigate = useNavigate();
@@ -30,16 +32,21 @@ const BookingPageItem = () => {
       <BookingContactDetailsWrapper>
         <BookingContactDetails />
       </BookingContactDetailsWrapper>
+      <BookingAditionalServicesWrapper>
+        <BookingAdditionalServices />
+      </BookingAditionalServicesWrapper>
+      <SearchButton>
       {activeStep === 1 && (
-        <Button
+        <CustomButton
           onClick={() => {
             setActiveStep(1);
             navigate("/paymentpage");
           }}
         >
           Continue
-        </Button>
+        </CustomButton>
       )}
+      </SearchButton><br/><br/>
     </BookingWrapper>
   );
 };
@@ -74,8 +81,20 @@ const BookingDetailsWrapper = styled.div`
 const BookingContactDetailsWrapper = styled.div`
   width: 100%;
   padding: 1.5vh 0 1.5vh 0;
-  
+`;
 
+const BookingAditionalServicesWrapper = styled.div`
+  width: 100%;
+  padding: 1.5vh 0 1.5vh 0;
+`;
+
+const SearchButton = styled.div`
+  align-items: flex-end;
+  text-align: flex-end;
+  justify-content: flex-end;
+  padding: 1rem 0rem 0 1rem;
+
+  
 `;
 
 const Button = styled.button`
