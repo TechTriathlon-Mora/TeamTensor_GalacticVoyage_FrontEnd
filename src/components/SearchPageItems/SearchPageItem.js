@@ -5,7 +5,8 @@ import { useNavigate } from "react-router-dom";
 import SearchPageItemHeader from "./SearchPageItemHeader";
 import SearchDepartureText from "./SearchDepartureText";
 import SearchFilterBar from "./SearchFilterBar";
-import SearchCards from "./SearchCard";
+import SearchDepartureCards from "./SearchDepartureCard";
+import SearchReturnCards from "./SearchReturnCard";
 import SearchReturnText from "./SearchReturnText";
 
 const SearchPageItem = () => {
@@ -27,11 +28,14 @@ const SearchPageItem = () => {
 
       <SearchDepartureText />
       <SearchFilterBar />
-      <SearchCardsWrapper>
-        <SearchCards />
-      </SearchCardsWrapper>
+      <SearchDepartureCardsWrapper>
+        <SearchDepartureCards />
+      </SearchDepartureCardsWrapper>
       <SearchReturnText />
       <SearchFilterBar />
+      <SearchReturnCardsWrapper>
+        <SearchReturnCards />
+      </SearchReturnCardsWrapper>
       {/* <SearchText>hello</SearchText> */}
       {activeStep === 0 && (
         <Button
@@ -69,7 +73,12 @@ const SearchHeaderWrapper = styled.div`
   backdrop-filter: blur(5rem);
 `;
 
-const SearchCardsWrapper = styled.div`
+const SearchDepartureCardsWrapper = styled.div`
+  width: 100%;
+  margin: 0 auto;
+`;
+
+const SearchReturnCardsWrapper = styled.div`
   width: 100%;
   margin: 0 auto;
 `;
