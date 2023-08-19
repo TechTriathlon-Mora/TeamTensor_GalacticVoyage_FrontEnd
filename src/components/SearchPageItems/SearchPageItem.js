@@ -8,6 +8,7 @@ import SearchFilterBar from "./SearchFilterBar";
 import SearchDepartureCards from "./SearchDepartureCard";
 import SearchReturnCards from "./SearchReturnCard";
 import SearchReturnText from "./SearchReturnText";
+import CustomButton from "./CustomButton";
 
 const SearchPageItem = () => {
   let navigate = useNavigate();
@@ -37,16 +38,25 @@ const SearchPageItem = () => {
         <SearchReturnCards />
       </SearchReturnCardsWrapper>
       {/* <SearchText>hello</SearchText> */}
-      {activeStep === 0 && (
-        <Button
-          onClick={() => {
-            setActiveStep(1);
-            navigate("/bookingpage");
-          }}
-        >
-          Continue
-        </Button>
-      )}
+      <SearchButton>
+        {activeStep === 0 && (
+          <CustomButton
+          textAlign="flex-end"
+          justifyContent="flex-end"
+          alignItems="flex-end"
+            backgroundColor="#FFB800"
+            textColor="#000000"
+           
+            marginTop="2rem"
+            onClick={() => {
+              setActiveStep(1);
+              navigate("/bookingpage");
+            }}
+          >
+            Continue
+          </CustomButton>
+        )}
+      </SearchButton><br/><br/><br/>
     </SearchWrapper>
   );
 };
@@ -83,6 +93,14 @@ const SearchReturnCardsWrapper = styled.div`
   margin: 0 auto;
 `;
 
+const SearchButton = styled.div`
+  align-items: flex-end;
+  text-align: flex-end;
+  justify-content: flex-end;
+  padding: 1rem 0rem 0 1rem;
+
+  
+`;
 const Button = styled.button`
   background-color: #000000;
   color: white;
