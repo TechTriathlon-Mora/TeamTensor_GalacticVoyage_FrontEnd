@@ -3,7 +3,8 @@ import ItemStepper from "../SearchPageItems/SearchPageItemStepper";
 import styled from "styled-components";
 import PaymentPageItemHeader from "./PaymentHeader";
 import PaymentInstruction from "./PaymentInstruction";
-import { Payment } from "@mui/icons-material";
+import PaymentCurrency from "./PaymentCurrency";
+import PaymentDelivery from "./PaymentDelivery";
 
 const PaymentPageItem = () => {
   return (
@@ -14,13 +15,20 @@ const PaymentPageItem = () => {
       <br />
       <PaymentStepperWrapper>
         <ItemStepper initialStep={2} />
-      </PaymentStepperWrapper><br/>
+      </PaymentStepperWrapper>
+      <br />
       <PaymentHeaderWrapper>
         <PaymentPageItemHeader />
       </PaymentHeaderWrapper>
       <PaymentInstructionWrapper>
         <PaymentInstruction />
       </PaymentInstructionWrapper>
+      <PaymentCurrencyWrapper>
+        <PaymentCurrency />
+      </PaymentCurrencyWrapper>
+      <PaymentDeliveryWrapper>
+        <PaymentDelivery />
+      </PaymentDeliveryWrapper>
     </PaymentWrapper>
   );
 };
@@ -41,16 +49,27 @@ const PaymentStepperWrapper = styled.div`
 `;
 
 const PaymentHeaderWrapper = styled.div`
-width: 100%;
+  width: 100%;
   padding: 1.5vh 0 1.5vh 0;
   background-color: rgba(255, 255, 255, 0.25);
   backdrop-filter: blur(5rem);
 `;
 
 const PaymentInstructionWrapper = styled.div`
-width: 100%;
+  width: 100%;
   padding: 1.5vh 0 1.5vh 0;
-  `;
+`;
+
+const PaymentCurrencyWrapper = styled.div`
+  width: 100%;
+  padding: 1.5vh 0 1.5vh 0;
+`;
+
+const PaymentDeliveryWrapper = styled.div`
+  width: 100%;
+  padding: 1.5vh 0 1.5vh 0;
+`;
+
 const PaymentText = styled.h1`
   padding-top: 20vh;
   color: white;
