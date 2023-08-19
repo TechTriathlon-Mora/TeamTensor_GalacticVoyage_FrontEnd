@@ -1,11 +1,11 @@
 import React from "react";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
-import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 
 const BookingDetails = () => {
-    const numberOfBoxes =4;
-    const passengerTypes = ["Adult", "Adult", "Child", "Child"];
+  const numberOfBoxes = 4;
+  const passengerTypes = ["Adult", "Adult", "Child", "Child"];
   return (
     <Box
       sx={{
@@ -40,7 +40,7 @@ const BookingDetails = () => {
         }}
       >
         <Typography
-          component="ol" 
+          component="ol"
           sx={{
             color: "white",
             fontSize: "1rem",
@@ -71,7 +71,7 @@ const BookingDetails = () => {
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
-            alignItems: "center",
+          alignItems: "center",
           marginTop: "5rem",
         }}
       >
@@ -81,14 +81,14 @@ const BookingDetails = () => {
             sx={{
               display: "flex",
               flexDirection: "row",
-                justifyContent: "space-between",
+              justifyContent: "space-between",
               alignItems: "center",
               width: "50vw",
               padding: "1rem",
               border: "1px solid #ffffff",
               borderRadius: "0.5rem",
               backgroundColor: "rgba(255, 255, 255, 0.25)",
-  backdropFilter: "blur(5rem)",
+              backdropFilter: "blur(5rem)",
               marginBottom: "1rem",
             }}
           >
@@ -101,8 +101,10 @@ const BookingDetails = () => {
             >
               Person {index + 1} - {passengerTypes[index]}
             </Typography>
-            
-            <KeyboardArrowDownIcon sx={{ color: "#FFB800", fontSize: "3rem" }} />
+
+            <KeyboardArrowDownIcon
+              sx={{ color: "#FFB800", fontSize: "3rem" }}
+            />
           </Box>
         ))}
       </Box>
