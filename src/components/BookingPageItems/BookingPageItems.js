@@ -4,24 +4,32 @@ import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
 import BookingItemHeader from "./BookingHeader";
 import BookingDetails from "./BookingDetails";
+import BookingContactDetails from "./BookingContactDetails";
 
 const BookingPageItem = () => {
   let navigate = useNavigate();
   const [activeStep, setActiveStep] = useState(1);
-  
+
   return (
-    <BookingWrapper><br/><br/><br/><br/>
+    <BookingWrapper>
+      <br />
+      <br />
+      <br />
+      <br />
       <BookingStepperWrapper>
-      <ItemStepper initialStep={1} />
-      </BookingStepperWrapper><br/>
+        <ItemStepper initialStep={1} />
+      </BookingStepperWrapper>
+      <br />
       <BooingHeaderWrapper>
         <BookingItemHeader />
-      </BooingHeaderWrapper><br/>
+      </BooingHeaderWrapper>
+      <br />
       <BookingDetailsWrapper>
         <BookingDetails />
       </BookingDetailsWrapper>
-
-      <BookingText>hellov</BookingText>
+      <BookingContactDetailsWrapper>
+        <BookingContactDetails />
+      </BookingContactDetailsWrapper>
       {activeStep === 1 && (
         <Button
           onClick={() => {
@@ -45,10 +53,10 @@ const BookingWrapper = styled.div`
 `;
 
 const BookingStepperWrapper = styled.div`
-    width: 100%;
-    /* padding-top: 10vh; */
-    background-color: rgba(255, 255, 255, 0.25);
-    backdrop-filter: blur(5rem);
+  width: 100%;
+  /* padding-top: 10vh; */
+  background-color: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(5rem);
 `;
 
 const BooingHeaderWrapper = styled.div`
@@ -61,13 +69,13 @@ const BooingHeaderWrapper = styled.div`
 const BookingDetailsWrapper = styled.div`
   width: 100%;
   padding: 1.5vh 0 1.5vh 0;
-  /* background-color: rgba(255, 255, 255, 0.25);
-  backdrop-filter: blur(5rem); */
 `;
 
-const BookingText = styled.h1`
-  padding-top: 20vh;
-  color: white;
+const BookingContactDetailsWrapper = styled.div`
+  width: 100%;
+  padding: 1.5vh 0 1.5vh 0;
+  
+
 `;
 
 const Button = styled.button`
@@ -83,4 +91,5 @@ const Button = styled.button`
   &:hover {
     background-color: #d9d9d9;
     color: #000000;
-  }`;
+  }
+`;
