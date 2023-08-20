@@ -63,7 +63,7 @@ const PaymentInstruction = () => {
           </li>
         </Typography>
       </Box>
-      </Box>
+    </Box>
   );
 };
 export default PaymentInstruction;

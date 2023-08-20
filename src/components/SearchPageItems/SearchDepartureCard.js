@@ -2,11 +2,9 @@ import React from "react";
 import Box from "@mui/material/Box";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { CardActionArea } from "@mui/material";
-import TimerOutlinedIcon from '@mui/icons-material/TimerOutlined';
-import { AlignHorizontalCenter } from "@mui/icons-material";
+import TimerOutlinedIcon from "@mui/icons-material/TimerOutlined";
 
 const SearchCard = () => {
   const cardData = [
@@ -67,45 +65,52 @@ const SearchCard = () => {
         >
           <CardActionArea>
             <CardContent>
-              <Typography gutterBottom variant="h5" component="div"
+              <Typography
+                gutterBottom
+                variant="h5"
+                component="div"
                 sx={{
-                    color: "#FFF",
+                  color: "#FFF",
                 }}
               >
                 {card.time1} - {card.place1}
               </Typography>
-              <Typography gutterBottom variant="h5" component="div"
-              sx={{
-                    color: "#FFF",
-                }}>
+              <Typography
+                gutterBottom
+                variant="h5"
+                component="div"
+                sx={{
+                  color: "#FFF",
+                }}
+              >
                 {card.time2} - {card.place2}
               </Typography>
               <hr style={{ margin: "0.5rem 0" }} />
-              <Box sx={{ 
-                display: "flex", 
-                flexDirection: "row"
-
-               }}>
-                <TimerOutlinedIcon sx={{ color: "#FFF",
-                fontSize: "1.5rem",
-                }} />
+              <Box
+                sx={{
+                  display: "flex",
+                  flexDirection: "row",
+                }}
+              >
+                <TimerOutlinedIcon sx={{ color: "#FFF", fontSize: "1.5rem" }} />
                 <Typography
-                    variant="body2"
-                    color="text.secondary"
-                    sx={{ flexGrow: 1,
-                    color: "#FFF",
-                     }}
+                  variant="body2"
+                  color="text.secondary"
+                  sx={{ flexGrow: 1, color: "#FFF" }}
                 >
-                    Total Duration {card.duration}
+                  Total Duration {card.duration}
                 </Typography>
-                
-                </Box>
-              <Typography variant="body2" color="text.secondary"
-              sx={{
-                    color: "#FFF",
-                    padding: "0.5rem 0 0 0.3rem ",
-              }}>
-                <b>Cabin: </b>{card.cabin}
+              </Box>
+              <Typography
+                variant="body2"
+                color="text.secondary"
+                sx={{
+                  color: "#FFF",
+                  padding: "0.5rem 0 0 0.3rem ",
+                }}
+              >
+                <b>Cabin: </b>
+                {card.cabin}
               </Typography>
             </CardContent>
           </CardActionArea>

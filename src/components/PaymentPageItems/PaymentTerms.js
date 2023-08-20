@@ -2,7 +2,7 @@ import React from "react";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Checkbox from "@mui/material/Checkbox";
-import ArrowDropDownOutlinedIcon from '@mui/icons-material/ArrowDropDownOutlined';
+import ArrowDropDownOutlinedIcon from "@mui/icons-material/ArrowDropDownOutlined";
 
 const label = { inputProps: { "aria-label": "Checkbox demo" } };
 
@@ -95,40 +95,38 @@ const PaymentTerms = () => {
       </Box>
       <Box
         sx={{
-            display: "flex",
-            flexDirection: "row",
-            justifyContent: "center",
-            alignItems: "center",
-            marginTop: "1rem",
-            }}
-        >
+          display: "flex",
+          flexDirection: "row",
+          justifyContent: "center",
+          alignItems: "center",
+          marginTop: "1rem",
+        }}
+      >
         <Typography
-            sx={{
-                color: "#ffffff",
-                fontSize: "2rem",
-                marginLeft: "2rem",
-                textAlign: "left",
-                alignItems: "left",
-            }}
+          sx={{
+            color: "#ffffff",
+            fontSize: "2rem",
+            marginLeft: "2rem",
+            textAlign: "left",
+            alignItems: "left",
+          }}
         >
-        Total Price:
+          Total Price:
         </Typography>
         <Typography
-            sx={{
-                color: "#ffffff",
-                fontSize: "2.5rem",
-                marginLeft: "2rem",
-                textAlign: "left",
-                alignItems: "left",
-            }}
+          sx={{
+            color: "#ffffff",
+            fontSize: "2.5rem",
+            marginLeft: "2rem",
+            textAlign: "left",
+            alignItems: "left",
+          }}
         >
-        $ 255 000.00 
+          $ 255 000.00
         </Typography>
-        <ArrowDropDownOutlinedIcon sx={{ color: "#FFF", fontSize: "2rem",
-            
-             }} />
-        </Box>
+        <ArrowDropDownOutlinedIcon sx={{ color: "#FFF", fontSize: "2rem" }} />
       </Box>
+    </Box>
   );
 };
 export default PaymentTerms;

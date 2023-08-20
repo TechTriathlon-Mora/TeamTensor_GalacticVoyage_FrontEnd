@@ -19,11 +19,10 @@ const Button = styled.button`
     background-color: ${(props) => props.hoverBgColor || "#FFB800"};
     color: ${(props) => props.hoverTextColor || "#ffffff"};
     transform: translateY(-3px);
-      box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1),
-        0px 20px 20px rgba(0, 0, 0, 0.15),
-        inset 0px 0px 0px 0.5px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1),
+      0px 20px 20px rgba(0, 0, 0, 0.15),
+      inset 0px 0px 0px 0.5px rgba(0, 0, 0, 0.15);
   }
-  
 `;
 
 const CustomButton = (props) => {

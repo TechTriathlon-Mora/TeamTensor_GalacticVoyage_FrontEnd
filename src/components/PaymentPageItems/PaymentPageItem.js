@@ -40,15 +40,17 @@ const PaymentPageItem = () => {
       </PaymentTermsWrapper>
       <SearchButton>
         <CustomButton
-        backgroundColor="#FFB800"
-            textColor="#000000"
+          backgroundColor="#FFB800"
+          textColor="#000000"
           onClick={() => {
             window.location.href = "https://www.paypal.com/";
           }}
         >
           Pay
         </CustomButton>
-      </SearchButton><br/><br/>
+      </SearchButton>
+      <br />
+      <br />
     </PaymentWrapper>
   );
 };

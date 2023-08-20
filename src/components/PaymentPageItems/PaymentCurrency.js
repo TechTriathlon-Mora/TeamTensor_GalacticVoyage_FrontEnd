@@ -65,7 +65,7 @@ const PaymentCurrency = () => {
             backdropFilter: "blur(5rem)",
           }}
         >
-          <CardActionArea sx={{ cursor: 'default' }}>
+          <CardActionArea sx={{ cursor: "default" }}>
             <CardContent>
               <Box
                 sx={{
