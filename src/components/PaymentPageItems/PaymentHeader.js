@@ -68,9 +68,24 @@ const PaymentPageItemHeader = () => {
               justifyContent: "flex-start",
               alignItems: "center",
               marginRight: "8rem",
+
+              "@media (max-width: 775px)": {
+                marginRight: "4rem",
+              },
+              "@media (max-width: 600px)": {
+                marginRight: "2rem",
+              },
+              "@media (max-width: 472px)": {
+                marginRight: "1rem",
+              },
             }}
           >
-            <FlightTakeoffIcon sx={{ color: "#FFF", fontSize: "2rem" }} />
+            <FlightTakeoffIcon sx={{ 
+              color: "#FFF", 
+              fontSize: "2rem",
+              "@media (max-width: 472px)": {
+                    fontSize: "1.5rem",
+                  }, }} />
             <Box
               sx={{
                 display: "flex",
@@ -83,6 +98,10 @@ const PaymentPageItemHeader = () => {
                   color: "#ffffff",
                   fontSize: "1rem",
                   pl: 1,
+
+                  "@media (max-width: 472px)": {
+                    fontSize: "0.8rem",
+                  },
                 }}
               >
                 Departure spaceflight
@@ -92,6 +111,9 @@ const PaymentPageItemHeader = () => {
                   color: "#ffffff",
                   fontSize: "0.9rem",
                   pl: 1,
+                  "@media (max-width: 472px)": {
+                    fontSize: "0.7rem",
+                  },
                 }}
               >
                 18.30 - 22.30
@@ -101,6 +123,9 @@ const PaymentPageItemHeader = () => {
                   color: "#ffffff",
                   fontSize: "0.9rem",
                   pl: 1,
+                  "@media (max-width: 472px)": {
+                    fontSize: "0.7rem",
+                  },
                 }}
               >
                 05/Aug/2023
@@ -114,9 +139,24 @@ const PaymentPageItemHeader = () => {
               justifyContent: "flex-end",
               alignItems: "center",
               marginLeft: "8rem",
+              "@media (max-width: 775px)": {
+                marginLeft: "4rem",
+              },
+              "@media (max-width: 600px)": {
+                marginLeft: "2rem",
+              },
+              "@media (max-width: 472px)": {
+                marginLeft: "1rem",
+              },
             }}
           >
-            <FlightLandIcon sx={{ color: "#FFF", fontSize: "2rem" }} />
+            <FlightLandIcon sx={{ 
+              color: "#FFF", 
+              fontSize: "2rem",
+              "@media (max-width: 472px)": {
+                    fontSize: "1.5rem",
+                  },
+             }} />
             <Box
               sx={{
                 display: "flex",
@@ -129,6 +169,9 @@ const PaymentPageItemHeader = () => {
                   color: "#ffffff",
                   fontSize: "1rem",
                   pl: 1,
+                  "@media (max-width: 472px)": {
+                    fontSize: "0.8rem",
+                  },
                 }}
               >
                 Return spaceflight
@@ -138,6 +181,9 @@ const PaymentPageItemHeader = () => {
                   color: "#ffffff",
                   fontSize: "0.9rem",
                   pl: 1,
+                  "@media (max-width: 472px)": {
+                    fontSize: "0.7rem",
+                  },
                 }}
               >
                 18.30 - 22.30
@@ -147,6 +193,9 @@ const PaymentPageItemHeader = () => {
                   color: "#ffffff",
                   fontSize: "0.9rem",
                   pl: 1,
+                  "@media (max-width: 472px)": {
+                    fontSize: "0.7rem",
+                  },
                 }}
               >
                 05/Aug/2023

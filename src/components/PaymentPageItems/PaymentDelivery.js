@@ -30,6 +30,11 @@ const PaymentDelivery = () => {
           padding: "0 0rem 0 5rem",
           textAlign: "left",
           alignItems: "left",
+          "@media (max-width: 472px)": {
+            fontSize: "1.5rem",
+            textAlign: "center",
+            padding: "0 0rem 0 0rem",
+          },
         }}
       >
         Method of delivery
@@ -37,6 +42,12 @@ const PaymentDelivery = () => {
       <Box
         sx={{
           margin: "0 5rem 0 5rem",
+          "@media (max-width: 650px)": {
+            margin: "0 1.5rem 0 1.5rem",
+          },
+          "@media (max-width: 450px)": {
+            margin: "0 1rem 0 1rem",
+          },
         }}
       >
         <Card
@@ -65,6 +76,15 @@ const PaymentDelivery = () => {
                     color: "#FFF",
                     fontSize: "1rem",
                     marginLeft: "3rem",
+                    "@media (max-width: 600px)": {
+                      marginLeft: "1rem",
+                    },
+                    "@media (max-width: 500px)": {
+                      fontSize: "0.8rem",
+                    },
+                    "@media (max-width: 400px)": {
+                      fontSize: "0.7rem",
+                    },
                   }}
                 >
                   At Inter-Galaxy Travels, we've shattered the boundaries of
@@ -92,6 +112,15 @@ const PaymentDelivery = () => {
                   sx={{
                     color: "#FFF",
                     fontSize: "1rem",
+                    "@media (max-width: 700px)": {
+                      fontSize: "0.9rem",
+                    },
+                    "@media (max-width: 400px)": {
+                      fontSize: "0.8rem",
+                    },
+                    "@media (max-width: 350px)": {
+                      fontSize: "0.7rem",
+                    },
                   }}
                 >
                   Enable your E-ticket.

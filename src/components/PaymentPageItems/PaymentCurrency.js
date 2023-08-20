@@ -48,6 +48,11 @@ const PaymentCurrency = () => {
           padding: "0 0rem 0 5rem",
           textAlign: "left",
           alignItems: "left",
+          "@media (max-width: 472px)": {
+            fontSize: "1.5rem",
+            textAlign: "center",
+            padding: "0 0rem 0 0rem",
+          },
         }}
       >
         Use another currency?
@@ -55,6 +60,12 @@ const PaymentCurrency = () => {
       <Box
         sx={{
           margin: "0 5rem 0 5rem",
+          "@media (max-width: 650px)": {
+            margin: "0 1.5rem 0 1.5rem",
+          },
+          "@media (max-width: 450px)": {
+            margin: "0 1rem 0 1rem",
+          },
         }}
       >
         <Card
@@ -83,6 +94,15 @@ const PaymentCurrency = () => {
                     color: "#FFF",
                     fontSize: "1rem",
                     marginLeft: "3rem",
+                    "@media (max-width: 600px)": {
+                      marginLeft: "1rem",
+                    },
+                    "@media (max-width: 500px)": {
+                      fontSize: "0.8rem",
+                    },
+                    "@media (max-width: 400px)": {
+                      fontSize: "0.7rem",
+                    },
                   }}
                 >
                   At Inter-Galaxy Travels, we've shattered the boundaries of
@@ -109,6 +129,15 @@ const PaymentCurrency = () => {
                     color: "#FFB800",
                     fontSize: "1.2rem",
                     marginLeft: "1rem",
+                    "@media (max-width: 700px)": {
+                      fontSize: "1rem",
+                    },
+                    "@media (max-width: 400px)": {
+                      fontSize: "0.8rem",
+                    },
+                    "@media (max-width: 350px)": {
+                      fontSize: "0.7rem",
+                    },
                   }}
                 >
                   Select a currency :
@@ -123,23 +152,50 @@ const PaymentCurrency = () => {
                     marginLeft: "0rem",
                     width: "20rem",
                     "& .MuiInputLabel-root": {
-                      color: "#FFF", // Set the label color to white
+                      color: "#FFF",
+                      "@media (max-width: 700px)": {
+                        fontSize: "0.8rem",
+                      },
+                      "@media (max-width: 525px)": {
+                        fontSize: "0.7rem",
+                      },
                     },
                     "& .MuiInputBase-root": {
-                      color: "#FFF", // Set the input text color to white
+                      color: "#FFF",
                     },
                     "& .MuiInput-underline:before, & .MuiInput-underline:after":
                       {
-                        borderBottomColor: "#FFF", // Set the underline color to white
+                        borderBottomColor: "#FFF",
                       },
                     "& .MuiSelect-icon": {
-                      color: "#FFF", // Set the select icon color to white
+                      color: "#FFF",
                     },
                     "& .MuiMenuItem-root": {
-                      color: "#FFF", // Set the menu item color to white
+                      color: "#FFF",
                     },
                     "& .MuiFormHelperText-root": {
-                      color: "#FFF", // Set the helper text color to white
+                      color: "#FFF",
+                      "@media (max-width: 700px)": {
+                        fontSize: "0.7rem",
+                      },
+                      "@media (max-width: 525px)": {
+                        fontSize: "0.6rem",
+                      },
+                    },
+                    "@media (max-width: 700px)": {
+                      width: "18rem",
+                    },
+                    "@media (max-width: 525px)": {
+                      width: "15rem",
+                    },
+                    "@media (max-width: 475px)": {
+                      width: "13rem",
+                    },
+                    "@media (max-width: 425px)": {
+                      width: "10rem",
+                    },
+                    "@media (max-width: 355px)": {
+                      width: "8rem",
                     },
                   }}
                 >
