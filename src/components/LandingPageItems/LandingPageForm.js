@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
+import { useNavigate } from "react-router-dom";
 import PropTypes from "prop-types";
 import {
   FormLabel,
@@ -9,7 +10,16 @@ import {
   Tabs,
   Tab,
 } from "@mui/material";
-import Checkbox from "@mui/material/Checkbox";
+import Radio from "@mui/material/Radio";
+import RadioGroup from "@mui/material/RadioGroup";
+import FormControlLabel from "@mui/material/FormControlLabel";
+import FormControl from "@mui/material/FormControl";
+import FlightTakeoffIcon from "@mui/icons-material/FlightTakeoff";
+import FlightLandIcon from "@mui/icons-material/FlightLand";
+import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
+import PersonIcon from "@mui/icons-material/Person";
+import ChairIcon from "@mui/icons-material/Chair";
+import CustomButton from "../SearchPageItems/CustomButton";
 
 const label = { inputProps: { "aria-label": "Checkbox demo" } };
 
@@ -47,6 +57,8 @@ function a11yProps(index) {
 }
 
 const LandingPageForm = () => {
+  let navigate = useNavigate();
+  const [activeStep, setActiveStep] = useState(1);
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event, newValue) => {
@@ -91,7 +103,7 @@ const LandingPageForm = () => {
               }}
             >
               <FormLabel sx={inputstyle} marginBottom={"0.5vw"}>
-                From
+                <FlightTakeoffIcon />
               </FormLabel>
 
               <TextField
@@ -125,7 +137,7 @@ const LandingPageForm = () => {
               }}
             >
               <FormLabel sx={inputstyle} marginBottom={"0.5vw"}>
-                To
+                <FlightLandIcon />
               </FormLabel>
 
               <TextField
@@ -136,9 +148,9 @@ const LandingPageForm = () => {
                 variant="outlined"
                 // sx={smallTextStyle}
                 sx={{
-                    ...smallTextStyle,
-                    width: "20%", // Adjust the width value as needed
-                  }}
+                  ...smallTextStyle,
+                  width: "20%", // Adjust the width value as needed
+                }}
                 // value={first_name}
                 // error={!!formErrors.firstNameError}
                 // helperText={formErrors.firstNameError}
@@ -162,7 +174,7 @@ const LandingPageForm = () => {
               }}
             >
               <FormLabel sx={inputstyle} marginBottom={"0.5vw"}>
-                Departure & Return
+                <CalendarMonthIcon />
               </FormLabel>
 
               <TextField
@@ -195,7 +207,7 @@ const LandingPageForm = () => {
               }}
             >
               <FormLabel sx={inputstyle} marginBottom={"0.5vw"}>
-                Passenger Count
+                <PersonIcon />
               </FormLabel>
 
               <Box
@@ -272,8 +284,8 @@ const LandingPageForm = () => {
                 marginTop: "2vw",
               }}
             >
-              <FormLabel sx={inputstyle} marginBottom={"0.5vw"}>
-                Seat Class
+              <FormLabel sx={inputstyle} marginTop={"0.5vw"}>
+                <ChairIcon />
               </FormLabel>
 
               <Box
@@ -344,7 +356,58 @@ const LandingPageForm = () => {
             Item Two
           </CustomTabPanel>
         </Box>
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: "row",
+          }}
+        >
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: "space-between",
+              px: 4,
+              marginTop: "15px",
+            }}
+          >
+            <FormControl>
+              <RadioGroup
+                row
+                aria-labelledby="demo-row-radio-buttons-group-label"
+                name="row-radio-buttons-group"
+              >
+                <FormControlLabel
+                  value="Round Trip"
+                  control={<Radio />}
+                  label="Rround Trip"
+                  textColor="white"
+                />
+                <FormControlLabel
+                  value="One Way"
+                  control={<Radio />}
+                  label="One Way"
+                  color="white"
+                />
+              </RadioGroup>
+            </FormControl>
+          </Box>
+          <SearchButton>
+            {activeStep === 1 && (
+              <CustomButton
+                backgroundColor="#FFB800"
+                textColor="#000000"
+                onClick={() => {
+                  setActiveStep(1);
+                  window.scrollTo(0, 0);
+                  navigate("/paymentpage");
+                }}
+              >
+                Search
+              </CustomButton>
+            )}
+          </SearchButton>
         </Box>
+      </Box>
     </HeaderWrapper>
   );
 };
@@ -361,13 +424,22 @@ const HeaderWrapper = styled.div`
 const inputstyle = {
   color: "#FFF",
   fontSize: "14px",
+  marginRight: "20px",
+  marginTop: "5px",
 };
+
+const SearchButton = styled.div`
+  align-items: flex-end;
+  text-align: flex-end;
+  justify-content: flex-end;
+  padding: 1rem 0rem 0 1rem;
+`;
 
 const smallTextStyle = {
   "& .MuiOutlinedInput-notchedOutline": {
     border: "2px solid rgba(255, 255, 255, 0.5)",
 
-    width: "10vw",
+    width: "20vw",
     height: "40px",
     margin: "none",
     padding: "none",

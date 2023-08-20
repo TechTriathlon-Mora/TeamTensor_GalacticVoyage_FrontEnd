@@ -19,6 +19,7 @@ const LandingPageItem = () => {
       <LandingPageFormWrapper>
         <LandingPageForm/>
       </LandingPageFormWrapper>
+      <br />
       </LandingWrapper>
   );
 };
