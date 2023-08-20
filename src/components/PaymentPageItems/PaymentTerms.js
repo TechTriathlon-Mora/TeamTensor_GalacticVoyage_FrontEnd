@@ -1,15 +1,18 @@
 import React from "react";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
+import Checkbox from "@mui/material/Checkbox";
+import ArrowDropDownOutlinedIcon from "@mui/icons-material/ArrowDropDownOutlined";
 
-const PaymentInstruction = () => {
+const label = { inputProps: { "aria-label": "Checkbox demo" } };
+
+const PaymentTerms = () => {
   return (
     <Box
       sx={{
         display: "flex",
         flexDirection: "column",
         width: "100%",
-        marginTop: "1rem",
         marginBottom: "1rem",
       }}
     >
@@ -18,14 +21,13 @@ const PaymentInstruction = () => {
           color: "white",
           fontSize: "1.8rem",
           letterSpacing: ".3rem",
-          marginTop: "1rem",
           marginBottom: "1rem",
           padding: "0 0rem 0 5rem",
           textAlign: "left",
           alignItems: "left",
         }}
       >
-        Instructions
+        Terms and conditions
       </Typography>
       <Box
         sx={{
@@ -63,7 +65,68 @@ const PaymentInstruction = () => {
           </li>
         </Typography>
       </Box>
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: "row",
+          justifyContent: "flex-start",
+          alignItems: "center",
+          px: 1,
+          marginTop: "2vw",
+          padding: "0 0rem 0 5rem",
+        }}
+      >
+        <Checkbox
+          {...label}
+          defaultChecked
+          color="default"
+          sx={{
+            color: "#FFF",
+          }}
+        />
+        <Typography
+          sx={{
+            color: "#FFF",
+            fontSize: "1rem",
+          }}
+        >
+          I have read and agree to Terms and Conditions.
+        </Typography>
+      </Box>
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: "row",
+          justifyContent: "center",
+          alignItems: "center",
+          marginTop: "1rem",
+        }}
+      >
+        <Typography
+          sx={{
+            color: "#ffffff",
+            fontSize: "2rem",
+            marginLeft: "2rem",
+            textAlign: "left",
+            alignItems: "left",
+          }}
+        >
+          Total Price:
+        </Typography>
+        <Typography
+          sx={{
+            color: "#ffffff",
+            fontSize: "2.5rem",
+            marginLeft: "2rem",
+            textAlign: "left",
+            alignItems: "left",
+          }}
+        >
+          $ 255 000.00
+        </Typography>
+        <ArrowDropDownOutlinedIcon sx={{ color: "#FFF", fontSize: "2rem" }} />
+      </Box>
     </Box>
   );
 };
-export default PaymentInstruction;
+export default PaymentTerms;

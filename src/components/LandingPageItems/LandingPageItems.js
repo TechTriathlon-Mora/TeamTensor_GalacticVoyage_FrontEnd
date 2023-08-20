@@ -1,12 +1,11 @@
 import React from "react";
-import { Grid, Box, Typography, Button, Avatar } from "@mui/material";
-import BackgroundImage from "../../assets/background.jpg";
-import PlanetImage from "../../assets/backgroundImage.png"
+import { Grid, Box, Typography} from "@mui/material";
+import PlanetImage from "../../assets/backgroundImage.png";
 
 const LandingPageItem = () => {
   return (
     <Box
-    sx={{
+      sx={{
         backgroundImage: ` url(${PlanetImage})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
@@ -19,7 +18,7 @@ const LandingPageItem = () => {
         alignItems: "center",
         justifyContent: "center",
         flexDirection: "column",
-         color: "white",
+        color: "white",
         padding: "0 5vw",
       }}
     >
@@ -32,7 +31,7 @@ const LandingPageItem = () => {
         sx={{ mt: { xs: 5, sm: 10 } }}
       >
         <Grid item xs={6} sm={6} md={6} lg={6}>
-        {/* <img
+          {/* <img
                 alt="Logo"
                 src={PlanetImage}
                 style={{
@@ -42,11 +41,9 @@ const LandingPageItem = () => {
 
                 }}
               /> */}
-            
         </Grid>
         <Grid item xs={6} sm={6} md={6} lg={6}>
-          
-        <Typography
+          <Typography
             variant="h4"
             component="h1"
             pb={1}
@@ -67,10 +64,11 @@ const LandingPageItem = () => {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
+            aliquip ex ea commodo consequat Lorem ipsum dolor sit amet,
+            consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+            exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat.
           </Typography>
         </Grid>
       </Grid>
