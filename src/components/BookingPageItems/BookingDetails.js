@@ -1,9 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
+import BookingPersonDetailsModal from "./BookingPersonDetailsModal";
 
 const BookingDetails = () => {
+  const [modalOpen, setModalOpen] = useState(false);
+  const [selectedPerson, setSelectedPerson] = useState({ number: null, type: null });
+
+  const handleOpen = (index, passengerType) => {
+    setSelectedPerson({ number: index + 1, type: passengerType });
+    setModalOpen(true);
+  };
+
+  const handleClose = () => {
+    setModalOpen(false);
+  };
   const numberOfBoxes = 4;
   const passengerTypes = ["Adult", "Adult", "Child", "Child"];
   return (
@@ -76,6 +88,7 @@ const BookingDetails = () => {
         }}
       >
         {Array.from({ length: numberOfBoxes }).map((_, index) => (
+          <div>
           <Box
             key={index}
             sx={{
@@ -104,8 +117,16 @@ const BookingDetails = () => {
 
             <KeyboardArrowDownIcon
               sx={{ color: "#FFB800", fontSize: "3rem" }}
+              cursor="pointer"
+              onClick={() => handleOpen(index, passengerTypes[index])}
             />
+            
           </Box>
+          <BookingPersonDetailsModal
+              open={modalOpen} onClose={handleClose}
+              selectedPerson={selectedPerson}
+            />
+          </div>
         ))}
       </Box>
     </Box>
