@@ -31,7 +31,6 @@ const BookingAdditionalServices = () => {
             fontSize: "1.3rem",
             textAlign: "center",
             padding: "0 0rem 0 0.2rem",
-
           },
         }}
       >
@@ -54,58 +53,63 @@ const BookingAdditionalServices = () => {
             alignItems: "center",
             width: "60vw",
             padding: "1rem",
-            // border: "1px solid #ffffff",
             borderRadius: "0.5rem",
             backgroundColor: "rgba(255, 255, 255, 0.25)",
             backdropFilter: "blur(5rem)",
             margin: "0 5rem 2rem 5rem",
           }}
         >
-          <InfoOutlinedIcon sx={{ 
-            color: "#FFF", 
-            fontSize: "2rem",
-            "@media (max-width: 600px)": {
-              fontSize: "1.8rem",
-            },
-            "@media (max-width: 500px)": {
-              fontSize: "1.5rem",
-            },
-            "@media (max-width: 400px)": {
-              fontSize: "1rem",
-            }, }} />
+          <InfoOutlinedIcon
+            sx={{
+              color: "#FFF",
+              fontSize: "2rem",
+              "@media (max-width: 600px)": {
+                fontSize: "1.8rem",
+              },
+              "@media (max-width: 500px)": {
+                fontSize: "1.5rem",
+              },
+              "@media (max-width: 400px)": {
+                fontSize: "1rem",
+              },
+            }}
+          />
           <Typography
             sx={{
               color: "#ffffff",
               fontSize: "1.2rem",
               marginLeft: "2rem",
               "@media (max-width: 600px)": {
-              fontSize: "1.1rem",
-              marginLeft: "0rem",
-            },
-            "@media (max-width: 500px)": {
-              fontSize: "1rem",
-              marginLeft: "0rem",
-            },
-            "@media (max-width: 400px)": {
-              fontSize: "0.8rem",
-              marginLeft: "0rem",
-            },
+                fontSize: "1.1rem",
+                marginLeft: "0rem",
+              },
+              "@media (max-width: 500px)": {
+                fontSize: "1rem",
+                marginLeft: "0rem",
+              },
+              "@media (max-width: 400px)": {
+                fontSize: "0.8rem",
+                marginLeft: "0rem",
+              },
             }}
           >
             Booking Details
           </Typography>
-          <ArrowDropDownOutlinedIcon sx={{
-             color: "#FFF", 
-             fontSize: "2rem" ,
-             "@media (max-width: 600px)": {
-              fontSize: "1.8rem",
-            },
-            "@media (max-width: 500px)": {
-              fontSize: "1.5rem",
-            },
-            "@media (max-width: 400px)": {
-              fontSize: "1rem",
-            },}} />
+          <ArrowDropDownOutlinedIcon
+            sx={{
+              color: "#FFF",
+              fontSize: "2rem",
+              "@media (max-width: 600px)": {
+                fontSize: "1.8rem",
+              },
+              "@media (max-width: 500px)": {
+                fontSize: "1.5rem",
+              },
+              "@media (max-width: 400px)": {
+                fontSize: "1rem",
+              },
+            }}
+          />
         </Box>
         <Box
           sx={{
@@ -115,58 +119,63 @@ const BookingAdditionalServices = () => {
             alignItems: "center",
             width: "60vw",
             padding: "1rem",
-            // border: "1px solid #ffffff",
             borderRadius: "0.5rem",
             backgroundColor: "rgba(255, 255, 255, 0.25)",
             backdropFilter: "blur(5rem)",
             margin: "0 5rem 2rem 5rem",
           }}
         >
-          <LuggageSharpIcon sx={{ 
-            color: "#FFF", 
-            fontSize: "2rem",
-            "@media (max-width: 600px)": {
-              fontSize: "1.8rem",
-            },
-            "@media (max-width: 500px)": {
-              fontSize: "1.5rem",
-            },
-            "@media (max-width: 400px)": {
-              fontSize: "1rem",
-            }, }} />
+          <LuggageSharpIcon
+            sx={{
+              color: "#FFF",
+              fontSize: "2rem",
+              "@media (max-width: 600px)": {
+                fontSize: "1.8rem",
+              },
+              "@media (max-width: 500px)": {
+                fontSize: "1.5rem",
+              },
+              "@media (max-width: 400px)": {
+                fontSize: "1rem",
+              },
+            }}
+          />
           <Typography
             sx={{
               color: "#ffffff",
               fontSize: "1.2rem",
               marginLeft: "2rem",
               "@media (max-width: 600px)": {
-              fontSize: "1.1rem",
-              marginLeft: "0rem",
-            },
-            "@media (max-width: 500px)": {
-              fontSize: "1rem",
-              marginLeft: "0rem",
-            },
-            "@media (max-width: 400px)": {
-              fontSize: "0.8rem",
-              marginLeft: "0rem",
-            },
+                fontSize: "1.1rem",
+                marginLeft: "0rem",
+              },
+              "@media (max-width: 500px)": {
+                fontSize: "1rem",
+                marginLeft: "0rem",
+              },
+              "@media (max-width: 400px)": {
+                fontSize: "0.8rem",
+                marginLeft: "0rem",
+              },
             }}
           >
             Luggage details
           </Typography>
-          <ArrowDropDownOutlinedIcon sx={{ 
-            color: "#FFF", 
-            fontSize: "2rem",
-            "@media (max-width: 600px)": {
-              fontSize: "1.8rem",
-            },
-            "@media (max-width: 500px)": {
-              fontSize: "1.5rem",
-            },
-            "@media (max-width: 400px)": {
-              fontSize: "1rem",
-            }, }} />
+          <ArrowDropDownOutlinedIcon
+            sx={{
+              color: "#FFF",
+              fontSize: "2rem",
+              "@media (max-width: 600px)": {
+                fontSize: "1.8rem",
+              },
+              "@media (max-width: 500px)": {
+                fontSize: "1.5rem",
+              },
+              "@media (max-width: 400px)": {
+                fontSize: "1rem",
+              },
+            }}
+          />
         </Box>
         <Box
           sx={{
@@ -176,59 +185,63 @@ const BookingAdditionalServices = () => {
             alignItems: "center",
             width: "60vw",
             padding: "1rem",
-            // border: "1px solid #ffffff",
             borderRadius: "0.5rem",
             backgroundColor: "rgba(255, 255, 255, 0.25)",
             backdropFilter: "blur(5rem)",
             margin: "0 5rem 2rem 5rem",
           }}
         >
-          <RequestPageOutlinedIcon sx={{ 
-            color: "#FFF", 
-            fontSize: "2rem",
-            "@media (max-width: 600px)": {
-              fontSize: "1.8rem",
-            },
-            "@media (max-width: 500px)": {
-              fontSize: "1.5rem",
-            },
-            "@media (max-width: 400px)": {
-              fontSize: "1rem",
-            }, }} />
+          <RequestPageOutlinedIcon
+            sx={{
+              color: "#FFF",
+              fontSize: "2rem",
+              "@media (max-width: 600px)": {
+                fontSize: "1.8rem",
+              },
+              "@media (max-width: 500px)": {
+                fontSize: "1.5rem",
+              },
+              "@media (max-width: 400px)": {
+                fontSize: "1rem",
+              },
+            }}
+          />
           <Typography
             sx={{
               color: "#ffffff",
               fontSize: "1.2rem",
               marginLeft: "2rem",
               "@media (max-width: 600px)": {
-              fontSize: "1.1rem",
-              marginLeft: "0rem",
-            },
-            "@media (max-width: 500px)": {
-              fontSize: "1rem",
-              marginLeft: "0rem",
-            },
-            "@media (max-width: 400px)": {
-              fontSize: "0.8rem",
-              marginLeft: "0rem",
-            },
+                fontSize: "1.1rem",
+                marginLeft: "0rem",
+              },
+              "@media (max-width: 500px)": {
+                fontSize: "1rem",
+                marginLeft: "0rem",
+              },
+              "@media (max-width: 400px)": {
+                fontSize: "0.8rem",
+                marginLeft: "0rem",
+              },
             }}
           >
             Spaceflight special requests
           </Typography>
-          <ArrowDropDownOutlinedIcon sx={{ 
-            color: "#FFF", 
-            fontSize: "2rem" ,
-            "@media (max-width: 600px)": {
-              fontSize: "1.8rem",
-            },
-            "@media (max-width: 500px)": {
-              fontSize: "1.5rem",
-            },
-            "@media (max-width: 400px)": {
-              fontSize: "1rem",
-            },
-            }} />
+          <ArrowDropDownOutlinedIcon
+            sx={{
+              color: "#FFF",
+              fontSize: "2rem",
+              "@media (max-width: 600px)": {
+                fontSize: "1.8rem",
+              },
+              "@media (max-width: 500px)": {
+                fontSize: "1.5rem",
+              },
+              "@media (max-width: 400px)": {
+                fontSize: "1rem",
+              },
+            }}
+          />
         </Box>
       </Box>
       <Box
@@ -275,16 +288,17 @@ const BookingAdditionalServices = () => {
             },
             "@media (max-width: 400px)": {
               fontSize: "1rem",
-              marginLeft: "0.8rem"
+              marginLeft: "0.8rem",
             },
           }}
         >
           $ 0.00
         </Typography>
-        <ArrowDropDownOutlinedIcon sx={{ 
-          color: "#FFF", 
-          fontSize: "2rem" ,
-          "@media (max-width: 600px)": {
+        <ArrowDropDownOutlinedIcon
+          sx={{
+            color: "#FFF",
+            fontSize: "2rem",
+            "@media (max-width: 600px)": {
               fontSize: "1.8rem",
             },
             "@media (max-width: 500px)": {
@@ -293,7 +307,8 @@ const BookingAdditionalServices = () => {
             "@media (max-width: 400px)": {
               fontSize: "1rem",
             },
-          }} />
+          }}
+        />
       </Box>
     </Box>
   );

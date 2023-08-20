@@ -49,7 +49,7 @@ const BookingContactDetails = () => {
           px: 4,
           marginTop: "2vw",
           "@media (max-width: 500px)": {
-            px:1,
+            px: 1,
           },
         }}
       >
@@ -64,15 +64,6 @@ const BookingContactDetails = () => {
           label=""
           variant="outlined"
           sx={smallTextStyle}
-          // value={first_name}
-          // error={!!formErrors.firstNameError}
-          // helperText={formErrors.firstNameError}
-          // onChange={(e) => {
-          //   setFirst_name(e.target.value);
-          // }}
-          // onBlur={handleFirstNameBlur}
-          // error={!firstNameValid}
-          // helperText={firstNameErrorMessage}
         />
       </Box>
       <Box
@@ -85,7 +76,7 @@ const BookingContactDetails = () => {
           px: 4,
           marginTop: "2vw",
           "@media (max-width: 500px)": {
-            px:1,
+            px: 1,
           },
         }}
       >
@@ -100,15 +91,6 @@ const BookingContactDetails = () => {
           label=""
           variant="outlined"
           sx={smallTextStyle}
-          // value={first_name}
-          // error={!!formErrors.firstNameError}
-          // helperText={formErrors.firstNameError}
-          // onChange={(e) => {
-          //   setFirst_name(e.target.value);
-          // }}
-          // onBlur={handleFirstNameBlur}
-          // error={!firstNameValid}
-          // helperText={firstNameErrorMessage}
         />
       </Box>
       <Box
@@ -121,7 +103,7 @@ const BookingContactDetails = () => {
           px: 4,
           marginTop: "2vw",
           "@media (max-width: 500px)": {
-            px:1,
+            px: 1,
           },
         }}
       >
@@ -136,15 +118,6 @@ const BookingContactDetails = () => {
           label=""
           variant="outlined"
           sx={smallTextStyle}
-          // value={first_name}
-          // error={!!formErrors.firstNameError}
-          // helperText={formErrors.firstNameError}
-          // onChange={(e) => {
-          //   setFirst_name(e.target.value);
-          // }}
-          // onBlur={handleFirstNameBlur}
-          // error={!firstNameValid}
-          // helperText={firstNameErrorMessage}
         />
       </Box>
       <Box
@@ -157,61 +130,22 @@ const BookingContactDetails = () => {
           px: 4,
           marginTop: "2vw",
           "@media (max-width: 500px)": {
-            px:1,
+            px: 1,
           },
         }}
       >
         <FormLabel sx={inputstyle} marginBottom={"0.5vw"}>
           Mobile Phone Number*
         </FormLabel>
-        
-          {/* <Box
-            sx={{
-                display: "flex",
-                justifyContent: "space-between",
-                
-            }}
-        >
+
         <TextField
-          id="email"
-          name="email"
-          type="email"
+          id="phoneNumber"
+          name="phoneNumber"
+          type="text"
           label=""
           variant="outlined"
-          sx={{ ...smallTextStyle, 
-          width: "30%"
-          
-            
-          }}
-          // value={first_name}
-          // error={!!formErrors.firstNameError}
-          // helperText={formErrors.firstNameError}
-          // onChange={(e) => {
-          //   setFirst_name(e.target.value);
-          // }}
-          // onBlur={handleFirstNameBlur}
-          // error={!firstNameValid}
-          // helperText={firstNameErrorMessage}
+          sx={smallTextStyle}
         />
-        </Box> */}
-          
-            <TextField
-              id="phoneNumber"
-              name="phoneNumber"
-              type="text"
-              label=""
-              variant="outlined"
-              sx={smallTextStyle }
-              // value={first_name}
-              // error={!!formErrors.firstNameError}
-              // helperText={formErrors.firstNameError}
-              // onChange={(e) => {
-              //   setFirst_name(e.target.value);
-              // }}
-              // onBlur={handleFirstNameBlur}
-              // error={!firstNameValid}
-              // helperText={firstNameErrorMessage}
-            />
       </Box>
       <Box
         sx={{
@@ -221,9 +155,9 @@ const BookingContactDetails = () => {
           alignItems: "center",
           width: "100%",
           px: 4,
-          // marginTop: "2vw",
+
           "@media (max-width: 500px)": {
-            px:1,
+            px: 1,
           },
         }}
       >
@@ -254,7 +188,7 @@ const BookingContactDetails = () => {
           marginTop: "2vw",
           alignItems: "flex-start",
           "@media (max-width: 500px)": {
-            px:1,
+            px: 1,
           },
         }}
       >
@@ -270,7 +204,7 @@ const BookingContactDetails = () => {
           px: 4,
           marginTop: "2vw",
           "@media (max-width: 500px)": {
-            px:1,
+            px: 1,
           },
         }}
       >
@@ -285,15 +219,6 @@ const BookingContactDetails = () => {
           label=""
           variant="outlined"
           sx={smallTextStyle}
-          // value={first_name}
-          // error={!!formErrors.firstNameError}
-          // helperText={formErrors.firstNameError}
-          // onChange={(e) => {
-          //   setFirst_name(e.target.value);
-          // }}
-          // onBlur={handleFirstNameBlur}
-          // error={!firstNameValid}
-          // helperText={firstNameErrorMessage}
         />
       </Box>
       <Box
@@ -306,7 +231,7 @@ const BookingContactDetails = () => {
           px: 4,
           marginTop: "2vw",
           "@media (max-width: 500px)": {
-            px:1,
+            px: 1,
           },
         }}
       >
@@ -321,15 +246,6 @@ const BookingContactDetails = () => {
           label=""
           variant="outlined"
           sx={smallTextStyle}
-          // value={first_name}
-          // error={!!formErrors.firstNameError}
-          // helperText={formErrors.firstNameError}
-          // onChange={(e) => {
-          //   setFirst_name(e.target.value);
-          // }}
-          // onBlur={handleFirstNameBlur}
-          // error={!firstNameValid}
-          // helperText={firstNameErrorMessage}
         />
       </Box>
       <Box
@@ -340,9 +256,9 @@ const BookingContactDetails = () => {
           alignItems: "center",
           width: "100%",
           px: 4,
-          // marginTop: "2vw",
+
           "@media (max-width: 500px)": {
-            px:1,
+            px: 1,
           },
         }}
       >
@@ -378,7 +294,7 @@ const inputstyle = {
 const smallTextStyle = {
   "& .MuiOutlinedInput-notchedOutline": {
     border: "2px solid rgba(255, 255, 255, 0.5)",
- 
+
     height: "7vh",
     margin: "none",
     padding: "none",
@@ -386,12 +302,9 @@ const smallTextStyle = {
     boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.25)",
     background: "rgba(255, 255, 255, 0.25)",
 
-    
-
     "&:hover fieldset": {
       borderColor: "grey",
     },
-   
   },
 
   "& .MuiOutlinedInput-input": {
@@ -403,10 +316,8 @@ const smallTextStyle = {
     width: "45vw",
     height: "2.8rem",
 
-
-
     "@media (max-width: 400px)": {
-      width: "55vw", 
+      width: "55vw",
     },
   },
   "& .MuiFormControl-root": {
