@@ -107,4 +107,6 @@ const SearchButton = styled.div`
   text-align: flex-end;
   justify-content: flex-end;
   padding: 1rem 0rem 0 1rem;
+
+   
 `;
