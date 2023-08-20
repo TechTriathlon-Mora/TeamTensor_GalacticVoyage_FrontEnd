@@ -1,12 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Checkbox from "@mui/material/Checkbox";
 import ArrowDropDownOutlinedIcon from "@mui/icons-material/ArrowDropDownOutlined";
+import PaymentCardDetailsModal from "./PaymentCardDetailsModal";
 
 const label = { inputProps: { "aria-label": "Checkbox demo" } };
 
 const PaymentTerms = () => {
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const handleOpen = () => {
+    setModalOpen(true);
+  };
+
+  const handleClose = () => {
+    setModalOpen(false);
+  };
   return (
     <Box
       sx={{
@@ -124,8 +134,14 @@ const PaymentTerms = () => {
         >
           $ 255 000.00
         </Typography>
-        <ArrowDropDownOutlinedIcon sx={{ color: "#FFF", fontSize: "2rem" }} />
+        <ArrowDropDownOutlinedIcon 
+        sx={{ color: "#FFF", fontSize: "2rem" }} 
+        cursor="pointer"
+        
+          onClick={handleOpen}
+        />
       </Box>
+       <PaymentCardDetailsModal open={modalOpen} onClose={handleClose} />
     </Box>
   );
 };
