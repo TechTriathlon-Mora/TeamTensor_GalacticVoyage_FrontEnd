@@ -30,30 +30,9 @@ const SearchPageItemStepper = ({ initialStep }) => {
     return completedSteps() === totalSteps();
   };
 
-  // const handleNext = () => {
-  //   const newActiveStep =
-  //     isLastStep() && !allStepsCompleted()
-  //       ? // It's the last step, but not all steps have been completed,
-  //         // find the first step that has been completed
-  //         steps.findIndex((step, i) => !(i in completed))
-  //       : activeStep + 1;
-  //   setActiveStep(newActiveStep);
-  // };
-
-  // const handleBack = () => {
-  //   setActiveStep((prevActiveStep) => prevActiveStep - 1);
-  // };
-
   const handleStep = (step) => () => {
     setActiveStep(step);
   };
-
-  // const handleComplete = () => {
-  //   const newCompleted = completed;
-  //   newCompleted[activeStep] = true;
-  //   setCompleted(newCompleted);
-  //   handleNext();
-  // };
 
   const handleReset = () => {
     setActiveStep(0);
@@ -83,19 +62,13 @@ const SearchPageItemStepper = ({ initialStep }) => {
           <Step key={label} completed={completed[index]}>
             <StepButton
               style={{
-                // backgroundColor: activeStep === index ? 'rgba(255, 255, 255, 0.25)' : 'transparent',
-                // backdropFilter: 'blur(5px)',
                 borderBottom:
                   activeStep === index ? "0.15rem solid white" : "none",
               }}
               color={activeStep === index ? "#D9D9D9" : "inherit"}
               onClick={handleStep(index)}
             >
-              <Typography color="white">
-                {" "}
-                {/* Add this */}
-                {label}
-              </Typography>
+              <Typography color="white"> {label}</Typography>
             </StepButton>
           </Step>
         ))}
@@ -113,22 +86,9 @@ const SearchPageItemStepper = ({ initialStep }) => {
           </React.Fragment>
         ) : (
           <React.Fragment>
-            {/* <Typography sx={{ mt: 2, mb: 1, py: 1 }}>
-              Step {activeStep + 1}
-            </Typography> */}
             <Box sx={{ display: "flex", flexDirection: "row", pt: 2 }}>
-              {/* <Button
-                color="inherit"
-                disabled={activeStep === 0}
-                onClick={handleBack}
-                sx={{ mr: 1 }}
-              >
-                Back
-              </Button> */}
               <Box sx={{ flex: "1 1 auto" }} />
-              {/* <Button onClick={handleNext} sx={{ mr: 1 }}>
-                Next
-              </Button> */}
+
               {activeStep !== steps.length &&
                 (completed[activeStep] ? (
                   {

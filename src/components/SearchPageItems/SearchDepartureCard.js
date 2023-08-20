@@ -104,21 +104,25 @@ const SearchCard = () => {
                   flexDirection: "row",
                 }}
               >
-                <TimerOutlinedIcon sx={{ 
-                  color: "#FFF", 
-                  fontSize: "1.5rem",
-                  "@media (max-width: 500px)": {
-                    fontSize: "1.2rem",
-                  }, }} />
+                <TimerOutlinedIcon
+                  sx={{
+                    color: "#FFF",
+                    fontSize: "1.5rem",
+                    "@media (max-width: 500px)": {
+                      fontSize: "1.2rem",
+                    },
+                  }}
+                />
                 <Typography
                   variant="body2"
                   color="text.secondary"
-                  sx={{ flexGrow: 1,
-                   color: "#FFF" ,
-                   "@media (max-width: 500px)": {
-                    fontSize: "0.8rem",
-                  },
-                   }}
+                  sx={{
+                    flexGrow: 1,
+                    color: "#FFF",
+                    "@media (max-width: 500px)": {
+                      fontSize: "0.8rem",
+                    },
+                  }}
                 >
                   Total Duration {card.duration}
                 </Typography>

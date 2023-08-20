@@ -18,23 +18,29 @@ const BookingPageItem = () => {
       <br />
       <br />
       <br />
+      {/* Stepper */}
       <BookingStepperWrapper>
         <ItemStepper initialStep={1} />
       </BookingStepperWrapper>
       <br />
+      {/* Header */}
       <BooingHeaderWrapper>
         <BookingItemHeader />
       </BooingHeaderWrapper>
       <br />
+      {/* Instruction and personal Details */}
       <BookingDetailsWrapper>
         <BookingDetails />
       </BookingDetailsWrapper>
+      {/* Contact Details and emergency contact*/}
       <BookingContactDetailsWrapper>
         <BookingContactDetails />
       </BookingContactDetailsWrapper>
+      {/* Additional Services */}
       <BookingAditionalServicesWrapper>
         <BookingAdditionalServices />
       </BookingAditionalServicesWrapper>
+      {/* Continue Button */}
       <SearchButton>
         {activeStep === 1 && (
           <CustomButton
@@ -66,7 +72,6 @@ const BookingWrapper = styled.div`
 
 const BookingStepperWrapper = styled.div`
   width: 100%;
-  /* padding-top: 10vh; */
   background-color: rgba(255, 255, 255, 0.25);
   backdrop-filter: blur(5rem);
 `;

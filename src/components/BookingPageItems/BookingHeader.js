@@ -10,7 +10,7 @@ const BookingPageItemHeader = () => {
       <Box
         sx={{
           display: "flex",
-          flexDirection: "column", // Display items vertically
+          flexDirection: "column",
           alignItems: "center",
         }}
       >
@@ -49,7 +49,7 @@ const BookingPageItemHeader = () => {
             paddingTop: "0.4rem",
           }}
         >
-          August 20, 2023 {/* Replace with the actual date */}
+          August 20, 2023
         </Typography>
       </Box>
     </HeaderWrapper>

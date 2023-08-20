@@ -92,7 +92,6 @@ const PaymentCardDetailsModal = ({ open, onClose }) => {
 
   return (
     <div>
-      {/* <Button onClick={handleOpen}>Open modal</Button> */}
       <Modal
         open={open}
         onClose={onClose}
@@ -128,7 +127,6 @@ const PaymentCardDetailsModal = ({ open, onClose }) => {
                   value={cardNumber}
                   onChange={handleCardNumberChange}
                   fullWidth
-                  sx={textFieldStyle}
                 />
                 {cardNumberError && (
                   <Typography color="error" variant="caption">
@@ -149,7 +147,6 @@ const PaymentCardDetailsModal = ({ open, onClose }) => {
                   value={expirationDate}
                   onChange={handleExpirationDateChange}
                   fullWidth
-                  sx={textFieldStyle}
                 />
                 {expirationError && (
                   <Typography color="error" variant="caption">
@@ -170,7 +167,6 @@ const PaymentCardDetailsModal = ({ open, onClose }) => {
                   value={cvv}
                   onChange={handleCvvChange}
                   fullWidth
-                  sx={textFieldStyle}
                 />
                 {cvvError && (
                   <Typography color="error" variant="caption">
@@ -179,19 +175,18 @@ const PaymentCardDetailsModal = ({ open, onClose }) => {
                 )}
               </div>
               <FormLabel marginBottom="0.5vw" sx={inputstyle}>
-              Card Holder’s Name*
-                </FormLabel>
-                <TextField
-                  id="name"
-                  name="name"
-                  type="text"
-                  label=""
-                  variant="outlined"
-                  value={name}
-                  fullWidth
-                  onChange={handleNameChange}
-                  sx={textFieldStyle}
-                />
+                Card Holder’s Name*
+              </FormLabel>
+              <TextField
+                id="name"
+                name="name"
+                type="text"
+                label=""
+                variant="outlined"
+                value={name}
+                fullWidth
+                onChange={handleNameChange}
+              />
               <Button
                 type="submit"
                 variant="contained"
@@ -219,10 +214,4 @@ export default PaymentCardDetailsModal;
 const inputstyle = {
   color: "#000000",
   fontSize: "0.8rem",
-};
-
-const textFieldStyle = {
-  "& .MuiOutlinedInput-notchedOutline": {
-    // height: "2.5vw",
-  },
 };
