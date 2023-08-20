@@ -15,8 +15,8 @@ const SearchReturnText = () => {
 
           textAlign: "center",
           "@media (max-width: 500px)": {
-                    fontSize: "1.5rem",
-                  },
+            fontSize: "1.5rem",
+          },
         }}
       >
         Choose your
@@ -29,8 +29,8 @@ const SearchReturnText = () => {
           marginBottom: "1rem",
           fontWeight: "bold",
           "@media (max-width: 500px)": {
-                    fontSize: "1.5rem",
-                  },
+            fontSize: "1.5rem",
+          },
         }}
       >
         Return Space Flight
@@ -44,8 +44,8 @@ const SearchReturnText = () => {
           fontWeight: "bold",
           textAlign: "center",
           "@media (max-width: 500px)": {
-                    fontSize: "1.5rem",
-                  },
+            fontSize: "1.5rem",
+          },
         }}
       >
         Mars <span style={{ color: "#FFF" }}>to</span> Earth

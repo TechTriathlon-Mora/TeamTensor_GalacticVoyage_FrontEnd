@@ -43,9 +43,9 @@ const PaymentInstruction = () => {
             margin: "0 1.5rem 0 1.5rem",
           },
           "@media (max-width: 450px)": {
-                padding: "0 1rem 0 1rem",
-                margin: "0 1rem 0 1rem",
-              },
+            padding: "0 1rem 0 1rem",
+            margin: "0 1rem 0 1rem",
+          },
         }}
       >
         <Typography
@@ -68,9 +68,9 @@ const PaymentInstruction = () => {
               padding: "0 0rem 0 1rem",
             },
             "@media (max-width: 350px)": {
-                fontSize: "0.7rem",
-                padding: "0 0rem 0 0.8rem",
-              },
+              fontSize: "0.7rem",
+              padding: "0 0rem 0 0.8rem",
+            },
           }}
         >
           <li>Please fill in the form below to book your flight.</li>

@@ -105,7 +105,6 @@ const PaymentMethod = () => {
                   alignItems: "center",
                   width: "100%",
                   px: 1,
-                  // marginTop: "2vw",
                 }}
               >
                 <PaymentMethodOption />

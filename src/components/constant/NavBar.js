@@ -9,10 +9,16 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
- import Logo from '../../assets/logo.png';
- import { Link } from "react-router-dom";
+import Logo from "../../assets/logo.png";
+import { Link } from "react-router-dom";
 
-const pages = ["Profile", "Ticket Details", "About Us","Contact Center","Chat Support"];
+const pages = [
+  "Profile",
+  "Ticket Details",
+  "About Us",
+  "Contact Center",
+  "Chat Support",
+];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 function ResponsiveAppBar() {
@@ -23,7 +29,6 @@ function ResponsiveAppBar() {
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
-  
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
@@ -56,7 +61,7 @@ function ResponsiveAppBar() {
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           {/* Web view */}
-          <Box sx={{ display: { xs: "none", md: "flex" },mr:15  }}>
+          <Box sx={{ display: { xs: "none", md: "flex" }, mr: 15 }}>
             <Link to="/" style={{ textDecoration: "none" }}>
               <img
                 alt="Logo"
@@ -68,7 +73,6 @@ function ResponsiveAppBar() {
               />
             </Link>
           </Box>
-          
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton
@@ -106,7 +110,7 @@ function ResponsiveAppBar() {
               ))}
             </Menu>
           </Box>
-          
+
           <Box sx={{ display: { xs: "flex", md: "none" } }}>
             <Link to="/" style={{ textDecoration: "none" }}>
               <img
@@ -119,7 +123,7 @@ function ResponsiveAppBar() {
               />
             </Link>
           </Box>
-          
+
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {pages.map((page) => (
               <Button
@@ -133,7 +137,6 @@ function ResponsiveAppBar() {
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>
-           
             <Menu
               sx={{ mt: "45px" }}
               id="menu-appbar"

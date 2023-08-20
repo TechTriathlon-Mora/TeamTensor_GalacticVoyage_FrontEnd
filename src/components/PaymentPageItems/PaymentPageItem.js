@@ -16,28 +16,36 @@ const PaymentPageItem = () => {
       <br />
       <br />
       <br />
+      {/* Stepper */}
       <PaymentStepperWrapper>
         <ItemStepper initialStep={2} />
       </PaymentStepperWrapper>
       <br />
+      {/* Header */}
       <PaymentHeaderWrapper>
         <PaymentPageItemHeader />
       </PaymentHeaderWrapper>
+      {/* Instruction */}
       <PaymentInstructionWrapper>
         <PaymentInstruction />
       </PaymentInstructionWrapper>
+      {/* Currency */}
       <PaymentCurrencyWrapper>
         <PaymentCurrency />
       </PaymentCurrencyWrapper>
+      {/* Delivery */}
       <PaymentDeliveryWrapper>
         <PaymentDelivery />
       </PaymentDeliveryWrapper>
+      {/* Payment Method */}
       <PaymentMethodWrapper>
         <PaymentMethod />
       </PaymentMethodWrapper>
+      {/* Terms and condition*/}
       <PaymentTermsWrapper>
         <PaymentTerms />
       </PaymentTermsWrapper>
+      {/* Button */}
       <SearchButton>
         <CustomButton
           backgroundColor="#FFB800"
@@ -65,7 +73,6 @@ const PaymentWrapper = styled.div`
 
 const PaymentStepperWrapper = styled.div`
   width: 100%;
-  /* padding-top: 10vh; */
   background-color: rgba(255, 255, 255, 0.25);
   backdrop-filter: blur(5rem);
 `;
@@ -107,6 +114,4 @@ const SearchButton = styled.div`
   text-align: flex-end;
   justify-content: flex-end;
   padding: 1rem 0rem 0 1rem;
-
-   
 `;

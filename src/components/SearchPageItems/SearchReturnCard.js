@@ -16,14 +16,6 @@ const SearchReturnCard = () => {
       duration: "5 hours",
       cabin: "Business",
     },
-    // {
-    //   time1: "10:00",
-    //   time2: "12:00",
-    //   place1: "Mars",
-    //   place2: "Earth",
-    //   duration: "5 hours",
-    //   cabin: "Business",
-    // },
   ];
 
   return (
@@ -88,22 +80,25 @@ const SearchReturnCard = () => {
                   flexDirection: "row",
                 }}
               >
-                <TimerOutlinedIcon sx={{ 
-                  color: "#FFF", 
-                  fontSize: "1.5rem",
-                  "@media (max-width: 500px)": {
-                    fontSize: "1.2rem",
-                  },
-                   }} />
+                <TimerOutlinedIcon
+                  sx={{
+                    color: "#FFF",
+                    fontSize: "1.5rem",
+                    "@media (max-width: 500px)": {
+                      fontSize: "1.2rem",
+                    },
+                  }}
+                />
                 <Typography
                   variant="body2"
                   color="text.secondary"
-                  sx={{ flexGrow: 1, 
-                  color: "#FFF",
-                  "@media (max-width: 500px)": {
-                    fontSize: "0.8rem",
-                  },
-                   }}
+                  sx={{
+                    flexGrow: 1,
+                    color: "#FFF",
+                    "@media (max-width: 500px)": {
+                      fontSize: "0.8rem",
+                    },
+                  }}
                 >
                   Total Duration {card.duration}
                 </Typography>

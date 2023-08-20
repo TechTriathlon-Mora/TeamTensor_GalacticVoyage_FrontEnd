@@ -55,9 +55,9 @@ const PaymentTerms = () => {
             margin: "0 1.5rem 0 1.5rem",
           },
           "@media (max-width: 450px)": {
-                padding: "0 1rem 0 1rem",
-                margin: "0 1rem 0 1rem",
-              },
+            padding: "0 1rem 0 1rem",
+            margin: "0 1rem 0 1rem",
+          },
         }}
       >
         <Typography
@@ -80,9 +80,9 @@ const PaymentTerms = () => {
               padding: "0 0rem 0 1rem",
             },
             "@media (max-width: 350px)": {
-                fontSize: "0.7rem",
-                padding: "0 0rem 0 0.8rem",
-              },
+              fontSize: "0.7rem",
+              padding: "0 0rem 0 0.8rem",
+            },
           }}
         >
           <li>Please fill in the form below to book your flight.</li>
@@ -141,14 +141,14 @@ const PaymentTerms = () => {
           alignItems: "center",
           marginTop: "1rem",
           "@media (max-width: 600px)": {
-              fontSize: "0.9rem",
-            },
-            "@media (max-width: 500px)": {
-              fontSize: "0.8rem",
-            },
-            "@media (max-width: 400px)": {
-              fontSize: "0.7rem",
-            },
+            fontSize: "0.9rem",
+          },
+          "@media (max-width: 500px)": {
+            fontSize: "0.8rem",
+          },
+          "@media (max-width: 400px)": {
+            fontSize: "0.7rem",
+          },
         }}
       >
         <Typography
@@ -186,20 +186,19 @@ const PaymentTerms = () => {
             },
             "@media (max-width: 400px)": {
               fontSize: "1rem",
-              marginLeft: "0.8rem"
+              marginLeft: "0.8rem",
             },
           }}
         >
           $ 255 000.00
         </Typography>
-        <ArrowDropDownOutlinedIcon 
-        sx={{ color: "#FFF", fontSize: "2rem" }} 
-        cursor="pointer"
-
+        <ArrowDropDownOutlinedIcon
+          sx={{ color: "#FFF", fontSize: "2rem" }}
+          cursor="pointer"
           onClick={handleOpen}
         />
       </Box>
-       <PaymentCardDetailsModal open={modalOpen} onClose={handleClose} />
+      <PaymentCardDetailsModal open={modalOpen} onClose={handleClose} />
     </Box>
   );
 };

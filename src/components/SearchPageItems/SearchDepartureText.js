@@ -15,8 +15,8 @@ const SearchDepartureText = () => {
 
           textAlign: "center",
           "@media (max-width: 500px)": {
-                    fontSize: "1.5rem",
-                  },
+            fontSize: "1.5rem",
+          },
         }}
       >
         Choose your
@@ -29,8 +29,8 @@ const SearchDepartureText = () => {
           marginBottom: "1rem",
           fontWeight: "bold",
           "@media (max-width: 500px)": {
-                    fontSize: "1.5rem",
-                  },
+            fontSize: "1.5rem",
+          },
         }}
       >
         Departure Space Flight
@@ -44,8 +44,8 @@ const SearchDepartureText = () => {
           fontWeight: "bold",
           textAlign: "center",
           "@media (max-width: 500px)": {
-                    fontSize: "1.5rem",
-                  },
+            fontSize: "1.5rem",
+          },
         }}
       >
         Earth <span style={{ color: "#FFF" }}>to</span> Mars

@@ -19,25 +19,32 @@ const SearchPageItem = () => {
       <br />
       <br />
       <br />
+      {/* Stepper */}
       <SearchStepperWrapper>
         <ItemStepper initialStep={0} />
       </SearchStepperWrapper>
       <br />
+      {/* Header */}
       <SearchHeaderWrapper>
         <SearchPageItemHeader />
       </SearchHeaderWrapper>
-
+      {/* Departure text*/}
       <SearchDepartureText />
+      {/* Filter bar */}
       <SearchFilterBar />
+      {/* Departure cards */}
       <SearchDepartureCardsWrapper>
         <SearchDepartureCards />
       </SearchDepartureCardsWrapper>
+      {/* Return text*/}
       <SearchReturnText />
+      {/* Filter bar */}
       <SearchFilterBar />
+      {/* Return cards */}
       <SearchReturnCardsWrapper>
         <SearchReturnCards />
       </SearchReturnCardsWrapper>
-      {/* <SearchText>hello</SearchText> */}
+      {/* Continue button */}
       <SearchButton>
         {activeStep === 0 && (
           <CustomButton
@@ -74,7 +81,6 @@ const SearchWrapper = styled.div`
 
 const SearchStepperWrapper = styled.div`
   width: 100%;
-  /* padding-top: 10vh; */
   background-color: rgba(255, 255, 255, 0.25);
   backdrop-filter: blur(5rem);
 `;
