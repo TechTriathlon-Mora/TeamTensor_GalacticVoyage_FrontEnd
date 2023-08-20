@@ -6,6 +6,8 @@ import PaymentInstruction from "./PaymentInstruction";
 import PaymentCurrency from "./PaymentCurrency";
 import PaymentDelivery from "./PaymentDelivery";
 import PaymentMethod from "./PaymentMethod";
+import PaymentTerms from "./PaymentTerms";
+import CustomButton from "../SearchPageItems/CustomButton";
 
 const PaymentPageItem = () => {
   return (
@@ -33,6 +35,20 @@ const PaymentPageItem = () => {
       <PaymentMethodWrapper>
         <PaymentMethod />
       </PaymentMethodWrapper>
+      <PaymentTermsWrapper>
+        <PaymentTerms />
+      </PaymentTermsWrapper>
+      <SearchButton>
+        <CustomButton
+        backgroundColor="#FFB800"
+            textColor="#000000"
+          onClick={() => {
+            window.location.href = "https://www.paypal.com/";
+          }}
+        >
+          Pay
+        </CustomButton>
+      </SearchButton><br/><br/>
     </PaymentWrapper>
   );
 };
@@ -79,7 +95,14 @@ const PaymentMethodWrapper = styled.div`
   padding: 1.5vh 0 1.5vh 0;
 `;
 
-const PaymentText = styled.h1`
-  padding-top: 20vh;
-  color: white;
+const PaymentTermsWrapper = styled.div`
+  width: 100%;
+  padding: 1.5vh 0 1.5vh 0;
+`;
+
+const SearchButton = styled.div`
+  align-items: flex-end;
+  text-align: flex-end;
+  justify-content: flex-end;
+  padding: 1rem 0rem 0 1rem;
 `;

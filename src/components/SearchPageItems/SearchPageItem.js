@@ -50,6 +50,7 @@ const SearchPageItem = () => {
             marginTop="2rem"
             onClick={() => {
               setActiveStep(1);
+              window.scrollTo(0, 0);
               navigate("/bookingpage");
             }}
           >

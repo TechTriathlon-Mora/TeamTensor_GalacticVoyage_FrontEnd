@@ -38,8 +38,11 @@ const BookingPageItem = () => {
       <SearchButton>
       {activeStep === 1 && (
         <CustomButton
+        backgroundColor="#FFB800"
+            textColor="#000000"
           onClick={() => {
             setActiveStep(1);
+            window.scrollTo(0, 0);
             navigate("/paymentpage");
           }}
         >

@@ -4,7 +4,7 @@ import Typography from "@mui/material/Typography";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import { CardActionArea } from "@mui/material";
-import PaymentIcon from '@mui/icons-material/Payment';
+import PaymentIcon from "@mui/icons-material/Payment";
 import Checkbox from "@mui/material/Checkbox";
 import PaymentMethodOption from "./PaymentMethodOption";
 
@@ -93,6 +93,34 @@ const PaymentMethod = () => {
             </CardContent>
           </CardActionArea>
         </Card>
+      </Box>
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: "row",
+          justifyContent: "flex-start",
+          alignItems: "center",
+          px: 1,
+          marginTop: "2vw",
+          padding: "0 0rem 0 5rem",
+        }}
+      >
+        <Checkbox
+          {...label}
+          defaultChecked
+          color="default"
+          sx={{
+            color: "#FFF",
+          }}
+        />
+        <Typography
+          sx={{
+            color: "#FFF",
+            fontSize: "1rem",
+          }}
+        >
+          Please remember my payment information for future visits.
+        </Typography>
       </Box>
     </Box>
   );
