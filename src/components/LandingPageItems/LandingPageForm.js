@@ -20,6 +20,9 @@ import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 import PersonIcon from "@mui/icons-material/Person";
 import ChairIcon from "@mui/icons-material/Chair";
 import CustomButton from "../SearchPageItems/CustomButton";
+import InputLabel from "@mui/material/InputLabel";
+import MenuItem from "@mui/material/MenuItem";
+import Select from "@mui/material/Select";
 
 const label = { inputProps: { "aria-label": "Checkbox demo" } };
 
@@ -60,9 +63,18 @@ const LandingPageForm = () => {
   let navigate = useNavigate();
   const [activeStep, setActiveStep] = useState(1);
   const [value, setValue] = React.useState(0);
+  const [from, setFrom] = React.useState("");
+  const [to, setTo] = React.useState("");
+  const [count, setCount] = React.useState("");
+  const [seat, setSeat] = React.useState("");
+
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
+    setFrom(event.target.value);
+    setTo(event.target.value);
+    setCount(event.target.value);
+    setSeat(event.target.value);
   };
 
   return (
@@ -105,25 +117,20 @@ const LandingPageForm = () => {
               <FormLabel sx={inputstyle} marginBottom={"0.5vw"}>
                 <FlightTakeoffIcon />
               </FormLabel>
-
-              <TextField
-                width="20%"
-                id="email"
-                name="email"
-                type="email"
-                label=""
-                variant="outlined"
-                sx={smallTextStyle}
-                // value={first_name}
-                // error={!!formErrors.firstNameError}
-                // helperText={formErrors.firstNameError}
-                // onChange={(e) => {
-                //   setFirst_name(e.target.value);
-                // }}
-                // onBlur={handleFirstNameBlur}
-                // error={!firstNameValid}
-                // helperText={firstNameErrorMessage}
-              />
+              <FormControl fullWidth>
+                <InputLabel id="demo-simple-select-label">From</InputLabel>
+                <Select
+                  labelId="demo-simple-select-label"
+                  id="demo-simple-select"
+                  value={from}
+                  label="From"
+                  onChange={handleChange}
+                >
+                  <MenuItem value={10}>Ten</MenuItem>
+                  <MenuItem value={20}>Twenty</MenuItem>
+                  <MenuItem value={30}>Thirty</MenuItem>
+                </Select>
+              </FormControl>
             </Box>
             <Box
               sx={{
@@ -140,27 +147,20 @@ const LandingPageForm = () => {
                 <FlightLandIcon />
               </FormLabel>
 
-              <TextField
-                id="email"
-                name="email"
-                type="email"
-                label=""
-                variant="outlined"
-                // sx={smallTextStyle}
-                sx={{
-                  ...smallTextStyle,
-                  width: "20%", // Adjust the width value as needed
-                }}
-                // value={first_name}
-                // error={!!formErrors.firstNameError}
-                // helperText={formErrors.firstNameError}
-                // onChange={(e) => {
-                //   setFirst_name(e.target.value);
-                // }}
-                // onBlur={handleFirstNameBlur}
-                // error={!firstNameValid}
-                // helperText={firstNameErrorMessage}
-              />
+              <FormControl fullWidth>
+                <InputLabel id="demo-simple-select-label">To</InputLabel>
+                <Select
+                  labelId="demo-simple-select-label"
+                  id="demo-simple-select"
+                  value={to}
+                  label="To"
+                  onChange={handleChange}
+                >
+                  <MenuItem value={10}>Ten</MenuItem>
+                  <MenuItem value={20}>Twenty</MenuItem>
+                  <MenuItem value={30}>Thirty</MenuItem>
+                </Select>
+              </FormControl>
             </Box>
             <Box
               sx={{
@@ -247,30 +247,20 @@ const LandingPageForm = () => {
           // helperText={firstNameErrorMessage}
         />
         </Box> */}
-                <Box
-                  sx={{
-                    display: "flex",
-                    justifyContent: "space-between",
-                  }}
-                >
-                  <TextField
-                    id="phoneNumber"
-                    name="phoneNumber"
-                    type="text"
-                    label=""
-                    variant="outlined"
-                    sx={{ ...smallTextStyle, width: "65%" }}
-                    // value={first_name}
-                    // error={!!formErrors.firstNameError}
-                    // helperText={formErrors.firstNameError}
-                    // onChange={(e) => {
-                    //   setFirst_name(e.target.value);
-                    // }}
-                    // onBlur={handleFirstNameBlur}
-                    // error={!firstNameValid}
-                    // helperText={firstNameErrorMessage}
-                  />
-                </Box>
+                <FormControl fullWidth>
+                  <InputLabel id="demo-simple-select-label">Passenger Count</InputLabel>
+                  <Select
+                    labelId="demo-simple-select-label"
+                    id="demo-simple-select"
+                    value={count}
+                    label="Passenger Count"
+                    onChange={handleChange}
+                  >
+                    <MenuItem value={10}>Ten</MenuItem>
+                    <MenuItem value={20}>Twenty</MenuItem>
+                    <MenuItem value={30}>Thirty</MenuItem>
+                  </Select>
+                </FormControl>
               </Box>
             </Box>
             <Box
@@ -325,30 +315,21 @@ const LandingPageForm = () => {
           // helperText={firstNameErrorMessage}
         />
         </Box> */}
-                <Box
-                  sx={{
-                    display: "flex",
-                    justifyContent: "space-between",
-                  }}
-                >
-                  <TextField
-                    id="phoneNumber"
-                    name="phoneNumber"
-                    type="text"
-                    label=""
-                    variant="outlined"
-                    sx={{ ...smallTextStyle, width: "65%" }}
-                    // value={first_name}
-                    // error={!!formErrors.firstNameError}
-                    // helperText={formErrors.firstNameError}
-                    // onChange={(e) => {
-                    //   setFirst_name(e.target.value);
-                    // }}
-                    // onBlur={handleFirstNameBlur}
-                    // error={!firstNameValid}
-                    // helperText={firstNameErrorMessage}
-                  />
-                </Box>
+                <FormControl fullWidth>
+                  <InputLabel id="demo-simple-select-label">Seat Class</InputLabel>
+                  <Select
+                    labelId="demo-simple-select-label"
+                    id="demo-simple-select"
+                    value={seat}
+                    label="Seat Class"
+                    onChange={handleChange}
+                  >
+                    <MenuItem value={10}>Economy</MenuItem>
+                    <MenuItem value={20}>Premium Economy</MenuItem>
+                    <MenuItem value={30}>Business</MenuItem>
+                    <MenuItem value={30}>First Class</MenuItem>
+                  </Select>
+                </FormControl>
               </Box>
             </Box>
           </CustomTabPanel>
