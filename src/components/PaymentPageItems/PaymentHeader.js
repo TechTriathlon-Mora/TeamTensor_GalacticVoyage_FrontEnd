@@ -58,7 +58,6 @@ const PaymentPageItemHeader = () => {
             display: "flex",
             flexDirection: "row",
             justifyContent: "space-between",
-            // alignItems: "center",
           }}
         >
           <Box
@@ -80,12 +79,15 @@ const PaymentPageItemHeader = () => {
               },
             }}
           >
-            <FlightTakeoffIcon sx={{ 
-              color: "#FFF", 
-              fontSize: "2rem",
-              "@media (max-width: 472px)": {
-                    fontSize: "1.5rem",
-                  }, }} />
+            <FlightTakeoffIcon
+              sx={{
+                color: "#FFF",
+                fontSize: "2rem",
+                "@media (max-width: 472px)": {
+                  fontSize: "1.5rem",
+                },
+              }}
+            />
             <Box
               sx={{
                 display: "flex",
@@ -150,13 +152,15 @@ const PaymentPageItemHeader = () => {
               },
             }}
           >
-            <FlightLandIcon sx={{ 
-              color: "#FFF", 
-              fontSize: "2rem",
-              "@media (max-width: 472px)": {
-                    fontSize: "1.5rem",
-                  },
-             }} />
+            <FlightLandIcon
+              sx={{
+                color: "#FFF",
+                fontSize: "2rem",
+                "@media (max-width: 472px)": {
+                  fontSize: "1.5rem",
+                },
+              }}
+            />
             <Box
               sx={{
                 display: "flex",

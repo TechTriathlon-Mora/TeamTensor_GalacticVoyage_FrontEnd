@@ -52,7 +52,6 @@ const BookingPersonDetailsModal = ({ open, onClose, selectedPerson }) => {
 
   return (
     <div>
-      {/* <Button onClick={handleOpen}>Open modal</Button> */}
       <Modal
         open={open}
         onClose={onClose}
@@ -89,7 +88,6 @@ const BookingPersonDetailsModal = ({ open, onClose, selectedPerson }) => {
                 value={firstName}
                 fullWidth
                 onChange={handleFirstNameChange}
-                sx={textFieldStyle}
               />
               <FormLabel marginBottom="0.5vw" sx={inputstyle}>
                 Last Name*
@@ -103,7 +101,6 @@ const BookingPersonDetailsModal = ({ open, onClose, selectedPerson }) => {
                 value={lastName}
                 fullWidth
                 onChange={handleLastNameChange}
-                sx={textFieldStyle}
               />
               <div>
                 <LocalizationProvider dateAdapter={AdapterDayjs}>
@@ -194,10 +191,4 @@ export default BookingPersonDetailsModal;
 const inputstyle = {
   color: "#000000",
   fontSize: "0.8rem",
-};
-
-const textFieldStyle = {
-  "& .MuiOutlinedInput-notchedOutline": {
-    // height: "2.5vw",
-  },
 };

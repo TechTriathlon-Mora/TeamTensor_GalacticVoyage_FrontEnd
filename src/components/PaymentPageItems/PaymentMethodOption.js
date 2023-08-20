@@ -66,14 +66,14 @@ const PaymentMethodOption = () => {
             sx={{
               color: "#ffffff",
               "@media (max-width: 600px)": {
-                      marginLeft: "1rem",
-                    },
-                    "@media (max-width: 500px)": {
-                      fontSize: "0.8rem",
-                    },
-                    "@media (max-width: 400px)": {
-                      fontSize: "0.7rem",
-                    },
+                marginLeft: "1rem",
+              },
+              "@media (max-width: 500px)": {
+                fontSize: "0.8rem",
+              },
+              "@media (max-width: 400px)": {
+                fontSize: "0.7rem",
+              },
             }}
           >
             Credit/Debit card
@@ -97,7 +97,6 @@ const PaymentMethodOption = () => {
                       width: "2.5rem",
                       height: "1.7rem",
                       marginRight: "1rem",
-                      
                     }}
                   />
                 }
@@ -161,14 +160,14 @@ const PaymentMethodOption = () => {
             sx={{
               color: "#ffffff",
               "@media (max-width: 600px)": {
-                      marginLeft: "1rem",
-                    },
-                    "@media (max-width: 500px)": {
-                      fontSize: "0.8rem",
-                    },
-                    "@media (max-width: 400px)": {
-                      fontSize: "0.7rem",
-                    },
+                marginLeft: "1rem",
+              },
+              "@media (max-width: 500px)": {
+                fontSize: "0.8rem",
+              },
+              "@media (max-width: 400px)": {
+                fontSize: "0.7rem",
+              },
             }}
           >
             Digital wallets
@@ -184,14 +183,14 @@ const PaymentMethodOption = () => {
             sx={{
               color: "#ffffff",
               "@media (max-width: 600px)": {
-                      marginLeft: "1rem",
-                    },
-                    "@media (max-width: 500px)": {
-                      fontSize: "0.8rem",
-                    },
-                    "@media (max-width: 400px)": {
-                      fontSize: "0.7rem",
-                    },
+                marginLeft: "1rem",
+              },
+              "@media (max-width: 500px)": {
+                fontSize: "0.8rem",
+              },
+              "@media (max-width: 400px)": {
+                fontSize: "0.7rem",
+              },
             }}
           >
             Mobile Pay
@@ -207,14 +206,14 @@ const PaymentMethodOption = () => {
             sx={{
               color: "#ffffff",
               "@media (max-width: 600px)": {
-                      marginLeft: "1rem",
-                    },
-                    "@media (max-width: 500px)": {
-                      fontSize: "0.8rem",
-                    },
-                    "@media (max-width: 400px)": {
-                      fontSize: "0.7rem",
-                    },
+                marginLeft: "1rem",
+              },
+              "@media (max-width: 500px)": {
+                fontSize: "0.8rem",
+              },
+              "@media (max-width: 400px)": {
+                fontSize: "0.7rem",
+              },
             }}
           >
             PSP

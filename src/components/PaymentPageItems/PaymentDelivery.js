@@ -104,7 +104,6 @@ const PaymentDelivery = () => {
                   alignItems: "center",
                   width: "100%",
                   px: 1,
-                  // marginTop: "2vw",
                 }}
               >
                 <Checkbox {...label} defaultChecked color="default" />
