@@ -20,10 +20,24 @@ const SearchFilterBar = () => {
       }}
     >
       <FilterAltOutlinedIcon
-        sx={{ color: "#FFF", fontSize: "3rem", padding: "0 0rem 0 5rem" }}
+        sx={{ color: "#FFF", 
+        fontSize: "3rem", 
+        padding: "0 0rem 0 5rem",
+        "@media (max-width: 500px)": {
+          padding: "0 0rem 0 2rem",
+          fontSize: "2rem",
+        },
+         }}
       />
       <CalendarMonthOutlinedIcon
-        sx={{ color: "#FFF", fontSize: "3rem", padding: "0 5rem 0 0rem" }}
+        sx={{ color: "#FFF",
+         fontSize: "3rem", 
+         padding: "0 5rem 0 0rem",
+         "@media (max-width: 500px)": {
+          padding: "0 2rem 0 0rem",
+          fontSize: "2rem",
+        },
+          }}
       />
     </Box>
   );
