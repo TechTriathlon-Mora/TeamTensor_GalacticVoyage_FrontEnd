@@ -5,6 +5,7 @@ import PaymentPageItemHeader from "./PaymentHeader";
 import PaymentInstruction from "./PaymentInstruction";
 import PaymentCurrency from "./PaymentCurrency";
 import PaymentDelivery from "./PaymentDelivery";
+import PaymentMethod from "./PaymentMethod";
 
 const PaymentPageItem = () => {
   return (
@@ -29,6 +30,9 @@ const PaymentPageItem = () => {
       <PaymentDeliveryWrapper>
         <PaymentDelivery />
       </PaymentDeliveryWrapper>
+      <PaymentMethodWrapper>
+        <PaymentMethod />
+      </PaymentMethodWrapper>
     </PaymentWrapper>
   );
 };
@@ -66,6 +70,11 @@ const PaymentCurrencyWrapper = styled.div`
 `;
 
 const PaymentDeliveryWrapper = styled.div`
+  width: 100%;
+  padding: 1.5vh 0 1.5vh 0;
+`;
+
+const PaymentMethodWrapper = styled.div`
   width: 100%;
   padding: 1.5vh 0 1.5vh 0;
 `;
