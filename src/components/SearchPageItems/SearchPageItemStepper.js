@@ -9,9 +9,9 @@ import PropTypes from "prop-types";
 
 const steps = ["Select", "Book", "Pay"];
 const stepDescriptions = [
-  'Select a space flight',
-  'Book fill in details',
-  'Payment'
+  "Select a space flight",
+  "Book fill in details",
+  "Payment",
 ];
 
 const SearchPageItemStepper = ({ initialStep }) => {
@@ -24,10 +24,6 @@ const SearchPageItemStepper = ({ initialStep }) => {
 
   const completedSteps = () => {
     return Object.keys(completed).length;
-  };
-
-  const isLastStep = () => {
-    return activeStep === totalSteps() - 1;
   };
 
   const allStepsCompleted = () => {
@@ -70,12 +66,16 @@ const SearchPageItemStepper = ({ initialStep }) => {
 
   return (
     <Box sx={{ width: "90%", paddingTop: "1vh", margin: "0 auto" }}>
-      <Typography 
-      sx={{ 
-        mt: 1, mb: 1, py: 1, px: 1,
-        color: 'white',
-        fontSize: '1.8rem',
-       }}>
+      <Typography
+        sx={{
+          mt: 1,
+          mb: 1,
+          py: 1,
+          px: 1,
+          color: "white",
+          fontSize: "1.8rem",
+        }}
+      >
         {stepDescriptions[activeStep]}
       </Typography>
       <Stepper nonLinear activeStep={activeStep}>

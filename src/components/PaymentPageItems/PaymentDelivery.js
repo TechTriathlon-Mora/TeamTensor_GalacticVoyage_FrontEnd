@@ -4,30 +4,12 @@ import Typography from "@mui/material/Typography";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import { CardActionArea } from "@mui/material";
-import MoneyIcon from "@mui/icons-material/Money";
-import TextField from "@mui/material/TextField";
-import MenuItem from "@mui/material/MenuItem";
+import LocalPostOfficeOutlinedIcon from "@mui/icons-material/LocalPostOfficeOutlined";
+import Checkbox from "@mui/material/Checkbox";
 
-const currencies = [
-  {
-    value: "USD",
-    label: "$",
-  },
-  {
-    value: "EUR",
-    label: "€",
-  },
-  {
-    value: "BTC",
-    label: "฿",
-  },
-  {
-    value: "JPY",
-    label: "¥",
-  },
-];
+const label = { inputProps: { "aria-label": "Checkbox demo" } };
 
-const PaymentCurrency = () => {
+const PaymentDelivery = () => {
   return (
     <Box
       sx={{
@@ -50,7 +32,7 @@ const PaymentCurrency = () => {
           alignItems: "left",
         }}
       >
-        Use another currency?
+        Method of delivery
       </Typography>
       <Box
         sx={{
@@ -73,7 +55,7 @@ const PaymentCurrency = () => {
                   flexDirection: "row",
                 }}
               >
-                <MoneyIcon
+                <LocalPostOfficeOutlinedIcon
                   sx={{ color: "#FFF", fontSize: "2rem", padding: "1rem" }}
                 />
                 <Typography
@@ -98,57 +80,22 @@ const PaymentCurrency = () => {
                 sx={{
                   display: "flex",
                   flexDirection: "row",
+                  justifyContent: "flex-start",
                   alignItems: "center",
+                  width: "100%",
+                  px: 1,
+                  // marginTop: "2vw",
                 }}
               >
+                <Checkbox {...label} defaultChecked color="default" />
                 <Typography
-                  variant="body2"
-                  color="text.secondary"
                   sx={{
-                    flexGrow: 1,
-                    color: "#FFB800",
-                    fontSize: "1.2rem",
-                    marginLeft: "1rem",
+                    color: "#FFF",
+                    fontSize: "1rem",
                   }}
                 >
-                  Select a currency :
+                  Enable your E-ticket.
                 </Typography>
-                <TextField
-                  id="outlined-select-currency"
-                  select
-                  label="Select"
-                  defaultValue="EUR"
-                  helperText="Please select your currency"
-                  sx={{
-                    marginLeft: "0rem",
-                    width: "20rem",
-                    "& .MuiInputLabel-root": {
-                      color: "#FFF", // Set the label color to white
-                    },
-                    "& .MuiInputBase-root": {
-                      color: "#FFF", // Set the input text color to white
-                    },
-                    "& .MuiInput-underline:before, & .MuiInput-underline:after":
-                      {
-                        borderBottomColor: "#FFF", // Set the underline color to white
-                      },
-                    "& .MuiSelect-icon": {
-                      color: "#FFF", // Set the select icon color to white
-                    },
-                    "& .MuiMenuItem-root": {
-                      color: "#FFF", // Set the menu item color to white
-                    },
-                    "& .MuiFormHelperText-root": {
-                      color: "#FFF", // Set the helper text color to white
-                    },
-                  }}
-                >
-                  {currencies.map((option) => (
-                    <MenuItem key={option.value} value={option.value}>
-                      {option.label}
-                    </MenuItem>
-                  ))}
-                </TextField>
               </Box>
             </CardContent>
           </CardActionArea>
@@ -157,4 +104,4 @@ const PaymentCurrency = () => {
     </Box>
   );
 };
-export default PaymentCurrency;
+export default PaymentDelivery;

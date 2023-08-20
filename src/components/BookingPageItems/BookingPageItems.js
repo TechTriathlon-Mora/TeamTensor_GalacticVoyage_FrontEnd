@@ -36,17 +36,22 @@ const BookingPageItem = () => {
         <BookingAdditionalServices />
       </BookingAditionalServicesWrapper>
       <SearchButton>
-      {activeStep === 1 && (
-        <CustomButton
-          onClick={() => {
-            setActiveStep(1);
-            navigate("/paymentpage");
-          }}
-        >
-          Continue
-        </CustomButton>
-      )}
-      </SearchButton><br/><br/>
+        {activeStep === 1 && (
+          <CustomButton
+            backgroundColor="#FFB800"
+            textColor="#000000"
+            onClick={() => {
+              setActiveStep(1);
+              window.scrollTo(0, 0);
+              navigate("/paymentpage");
+            }}
+          >
+            Continue
+          </CustomButton>
+        )}
+      </SearchButton>
+      <br />
+      <br />
     </BookingWrapper>
   );
 };
@@ -93,22 +98,4 @@ const SearchButton = styled.div`
   text-align: flex-end;
   justify-content: flex-end;
   padding: 1rem 0rem 0 1rem;
-
-  
-`;
-
-const Button = styled.button`
-  background-color: #000000;
-  color: white;
-  border: none;
-  padding: 1rem 2rem;
-  font-size: 1.5rem;
-  border-radius: 0.5rem;
-  margin-top: 2rem;
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
-  &:hover {
-    background-color: #d9d9d9;
-    color: #000000;
-  }
 `;

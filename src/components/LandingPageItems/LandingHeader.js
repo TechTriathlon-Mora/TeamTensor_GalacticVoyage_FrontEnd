@@ -109,7 +109,7 @@ const LandingPageHeaderItems = () => {
               onChange={handleChange}
               aria-label="basic tabs example"
             >
-              <Tab label="Item One" {...a11yProps(0)} />
+              <Tab label="Item One" {...a11yProps(0)} color="red"/>
               <Tab label="Item Two" {...a11yProps(1)} />
             </Tabs>
           </Box>

@@ -41,22 +41,25 @@ const SearchPageItem = () => {
       <SearchButton>
         {activeStep === 0 && (
           <CustomButton
-          textAlign="flex-end"
-          justifyContent="flex-end"
-          alignItems="flex-end"
+            textAlign="flex-end"
+            justifyContent="flex-end"
+            alignItems="flex-end"
             backgroundColor="#FFB800"
             textColor="#000000"
-           
             marginTop="2rem"
             onClick={() => {
               setActiveStep(1);
+              window.scrollTo(0, 0);
               navigate("/bookingpage");
             }}
           >
             Continue
           </CustomButton>
         )}
-      </SearchButton><br/><br/><br/>
+      </SearchButton>
+      <br />
+      <br />
+      <br />
     </SearchWrapper>
   );
 };
@@ -98,21 +101,4 @@ const SearchButton = styled.div`
   text-align: flex-end;
   justify-content: flex-end;
   padding: 1rem 0rem 0 1rem;
-
-  
-`;
-const Button = styled.button`
-  background-color: #000000;
-  color: white;
-  border: none;
-  padding: 1rem 2rem;
-  font-size: 1.5rem;
-  border-radius: 0.5rem;
-  margin-top: 2rem;
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
-  &:hover {
-    background-color: #d9d9d9;
-    color: #000000;
-  }
 `;

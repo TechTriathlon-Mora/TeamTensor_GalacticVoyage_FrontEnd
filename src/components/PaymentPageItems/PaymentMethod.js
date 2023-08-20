@@ -4,30 +4,13 @@ import Typography from "@mui/material/Typography";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import { CardActionArea } from "@mui/material";
-import MoneyIcon from "@mui/icons-material/Money";
-import TextField from "@mui/material/TextField";
-import MenuItem from "@mui/material/MenuItem";
+import PaymentIcon from "@mui/icons-material/Payment";
+import Checkbox from "@mui/material/Checkbox";
+import PaymentMethodOption from "./PaymentMethodOption";
 
-const currencies = [
-  {
-    value: "USD",
-    label: "$",
-  },
-  {
-    value: "EUR",
-    label: "€",
-  },
-  {
-    value: "BTC",
-    label: "฿",
-  },
-  {
-    value: "JPY",
-    label: "¥",
-  },
-];
+const label = { inputProps: { "aria-label": "Checkbox demo" } };
 
-const PaymentCurrency = () => {
+const PaymentMethod = () => {
   return (
     <Box
       sx={{
@@ -50,7 +33,7 @@ const PaymentCurrency = () => {
           alignItems: "left",
         }}
       >
-        Use another currency?
+        Payment option
       </Typography>
       <Box
         sx={{
@@ -73,7 +56,7 @@ const PaymentCurrency = () => {
                   flexDirection: "row",
                 }}
               >
-                <MoneyIcon
+                <PaymentIcon
                   sx={{ color: "#FFF", fontSize: "2rem", padding: "1rem" }}
                 />
                 <Typography
@@ -98,63 +81,48 @@ const PaymentCurrency = () => {
                 sx={{
                   display: "flex",
                   flexDirection: "row",
+                  justifyContent: "flex-start",
                   alignItems: "center",
+                  width: "100%",
+                  px: 1,
+                  // marginTop: "2vw",
                 }}
               >
-                <Typography
-                  variant="body2"
-                  color="text.secondary"
-                  sx={{
-                    flexGrow: 1,
-                    color: "#FFB800",
-                    fontSize: "1.2rem",
-                    marginLeft: "1rem",
-                  }}
-                >
-                  Select a currency :
-                </Typography>
-                <TextField
-                  id="outlined-select-currency"
-                  select
-                  label="Select"
-                  defaultValue="EUR"
-                  helperText="Please select your currency"
-                  sx={{
-                    marginLeft: "0rem",
-                    width: "20rem",
-                    "& .MuiInputLabel-root": {
-                      color: "#FFF", // Set the label color to white
-                    },
-                    "& .MuiInputBase-root": {
-                      color: "#FFF", // Set the input text color to white
-                    },
-                    "& .MuiInput-underline:before, & .MuiInput-underline:after":
-                      {
-                        borderBottomColor: "#FFF", // Set the underline color to white
-                      },
-                    "& .MuiSelect-icon": {
-                      color: "#FFF", // Set the select icon color to white
-                    },
-                    "& .MuiMenuItem-root": {
-                      color: "#FFF", // Set the menu item color to white
-                    },
-                    "& .MuiFormHelperText-root": {
-                      color: "#FFF", // Set the helper text color to white
-                    },
-                  }}
-                >
-                  {currencies.map((option) => (
-                    <MenuItem key={option.value} value={option.value}>
-                      {option.label}
-                    </MenuItem>
-                  ))}
-                </TextField>
+                <PaymentMethodOption />
               </Box>
             </CardContent>
           </CardActionArea>
         </Card>
       </Box>
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: "row",
+          justifyContent: "flex-start",
+          alignItems: "center",
+          px: 1,
+          marginTop: "2vw",
+          padding: "0 0rem 0 5rem",
+        }}
+      >
+        <Checkbox
+          {...label}
+          defaultChecked
+          color="default"
+          sx={{
+            color: "#FFF",
+          }}
+        />
+        <Typography
+          sx={{
+            color: "#FFF",
+            fontSize: "1rem",
+          }}
+        >
+          Please remember my payment information for future visits.
+        </Typography>
+      </Box>
     </Box>
   );
 };
-export default PaymentCurrency;
+export default PaymentMethod;
