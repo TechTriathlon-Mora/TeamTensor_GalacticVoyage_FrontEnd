@@ -33,7 +33,7 @@ const LandingPageHeaderItems = () => {
           pb={3}
           sx={{
             fontSize: "1.1em",
-            color: "white",
+            color: "#FFB800",
             textAlign: "right",
             marginRight: "10%",
             marginLeft: "40%",

@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import LandingHeaderItems from "./LandingHeader";
 import LandingPageForm from "./LandingPageForm";
+import Footer from "./../Footer/Footer";
 import BackgroundImage from "../../assets/background.jpg";
 import PlanetImage from "../../assets/backgroundImage.png"
 
@@ -20,6 +21,9 @@ const LandingPageItem = () => {
         <LandingPageForm/>
       </LandingPageFormWrapper>
       <br />
+      <FooterWrapper>
+        <Footer />
+      </FooterWrapper>
       </LandingWrapper>
   );
 };
@@ -40,6 +44,13 @@ const LandingPageFormWrapper = styled.div`
 `;
 
 const LandingHeaderWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+`;
+
+const FooterWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;

@@ -23,6 +23,11 @@ import CustomButton from "../SearchPageItems/CustomButton";
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import Select from "@mui/material/Select";
+import dayjs from "dayjs";
+import { DemoContainer, DemoItem } from "@mui/x-date-pickers/internals/demo";
+import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
+import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
+import { DesktopDatePicker } from "@mui/x-date-pickers/DesktopDatePicker";
 
 const label = { inputProps: { "aria-label": "Checkbox demo" } };
 
@@ -171,29 +176,41 @@ const LandingPageForm = () => {
                 width: "90%",
                 px: 2,
                 marginTop: "2vw",
+                sx: { textFieldStyle }
               }}
             >
               <FormLabel sx={inputstyle} marginBottom={"0.5vw"}>
                 <CalendarMonthIcon />
               </FormLabel>
 
-              <TextField
-                id="phoneNumber"
-                name="phoneNumber"
-                type="text"
-                label=""
-                variant="outlined"
-                sx={smallTextStyle}
-                // value={first_name}
-                // error={!!formErrors.firstNameError}
-                // helperText={formErrors.firstNameError}
-                // onChange={(e) => {
-                //   setFirst_name(e.target.value);
-                // }}
-                // onBlur={handleFirstNameBlur}
-                // error={!firstNameValid}
-                // helperText={firstNameErrorMessage}
-              />
+              <LocalizationProvider dateAdapter={AdapterDayjs}>
+                  <DemoContainer
+                    components={[
+                      "DatePicker",
+                      "MobileDatePicker",
+                      "DesktopDatePicker",
+                      "StaticDatePicker",
+                    ]}
+                  >
+                    <DemoItem label="Departure">
+                      <DesktopDatePicker defaultValue={dayjs("2022-04-17")} />
+                    </DemoItem>
+                  </DemoContainer>
+                </LocalizationProvider>
+                <LocalizationProvider dateAdapter={AdapterDayjs}>
+                  <DemoContainer
+                    components={[
+                      "DatePicker",
+                      "MobileDatePicker",
+                      "DesktopDatePicker",
+                      "StaticDatePicker",
+                    ]}
+                  >
+                    <DemoItem label="Return">
+                      <DesktopDatePicker defaultValue={dayjs("2022-04-17")} />
+                    </DemoItem>
+                  </DemoContainer>
+                </LocalizationProvider>
             </Box>
             <Box
               sx={{
@@ -466,3 +483,8 @@ const smallTextStyle = {
     },
   },
 };
+const textFieldStyle = {
+    "& .MuiOutlinedInput-notchedOutline": {
+      // height: "2.5vw",
+    },
+  };
