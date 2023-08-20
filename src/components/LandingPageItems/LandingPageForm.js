@@ -397,7 +397,7 @@ const LandingPageForm = () => {
                 onClick={() => {
                   setActiveStep(1);
                   window.scrollTo(0, 0);
-                  navigate("/paymentpage");
+                  navigate("/searchpage");
                 }}
               >
                 Search
