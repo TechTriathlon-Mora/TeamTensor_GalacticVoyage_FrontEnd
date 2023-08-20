@@ -1,8 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-import PropTypes from 'prop-types';
-import { FormLabel, Box, TextField, Typography, Tabs, Tab } from "@mui/material";
-import Checkbox from "@mui/material/Checkbox";
+import PropTypes from "prop-types";
+import {
+  Box,
+  Typography,
+} from "@mui/material";
 
 const LandingPageHeaderItems = () => {
   return (
@@ -11,7 +13,7 @@ const LandingPageHeaderItems = () => {
         sx={{
           display: "flex",
           flexDirection: "column", // Display items vertically
-        //   alignItems: "center",
+          //   alignItems: "center",
         }}
       >
         <Typography
@@ -24,7 +26,7 @@ const LandingPageHeaderItems = () => {
             marginRight: "10%",
           }}
         >
-            <br />
+          <br />
           Ready To Take Off <br /> to Another Planet?
         </Typography>
         <Typography
@@ -37,7 +39,7 @@ const LandingPageHeaderItems = () => {
             marginLeft: "40%",
           }}
         >
-         <br />
+          <br />
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut
