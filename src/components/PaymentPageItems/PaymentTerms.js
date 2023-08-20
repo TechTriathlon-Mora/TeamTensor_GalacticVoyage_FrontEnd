@@ -35,6 +35,11 @@ const PaymentTerms = () => {
           padding: "0 0rem 0 5rem",
           textAlign: "left",
           alignItems: "left",
+          "@media (max-width: 472px)": {
+            fontSize: "1.5rem",
+            textAlign: "center",
+            padding: "0 0rem 0 0rem",
+          },
         }}
       >
         Terms and conditions
@@ -46,6 +51,13 @@ const PaymentTerms = () => {
           borderRadius: "0.5rem",
           backgroundColor: "rgba(255, 255, 255, 0.05)",
           padding: "1rem",
+          "@media (max-width: 650px)": {
+            margin: "0 1.5rem 0 1.5rem",
+          },
+          "@media (max-width: 450px)": {
+                padding: "0 1rem 0 1rem",
+                margin: "0 1rem 0 1rem",
+              },
         }}
       >
         <Typography
@@ -59,6 +71,18 @@ const PaymentTerms = () => {
             alignItems: "left",
             padding: "0 0rem 0 5rem",
             listStyleType: "decimal",
+
+            "@media (max-width: 500px)": {
+              fontSize: "0.9rem",
+            },
+            "@media (max-width: 450px)": {
+              fontSize: "0.8rem",
+              padding: "0 0rem 0 1rem",
+            },
+            "@media (max-width: 350px)": {
+                fontSize: "0.7rem",
+                padding: "0 0rem 0 0.8rem",
+              },
           }}
         >
           <li>Please fill in the form below to book your flight.</li>
@@ -84,6 +108,12 @@ const PaymentTerms = () => {
           px: 1,
           marginTop: "2vw",
           padding: "0 0rem 0 5rem",
+          "@media (max-width: 650px)": {
+            padding: "0 1.5rem 0 1.5rem",
+          },
+          "@media (max-width: 450px)": {
+            padding: "0 1rem 0 1rem",
+          },
         }}
       >
         <Checkbox
@@ -110,6 +140,15 @@ const PaymentTerms = () => {
           justifyContent: "center",
           alignItems: "center",
           marginTop: "1rem",
+          "@media (max-width: 600px)": {
+              fontSize: "0.9rem",
+            },
+            "@media (max-width: 500px)": {
+              fontSize: "0.8rem",
+            },
+            "@media (max-width: 400px)": {
+              fontSize: "0.7rem",
+            },
         }}
       >
         <Typography
@@ -119,6 +158,15 @@ const PaymentTerms = () => {
             marginLeft: "2rem",
             textAlign: "left",
             alignItems: "left",
+            "@media (max-width: 600px)": {
+              fontSize: "1.8rem",
+            },
+            "@media (max-width: 500px)": {
+              fontSize: "1.5rem",
+            },
+            "@media (max-width: 400px)": {
+              fontSize: "1rem",
+            },
           }}
         >
           Total Price:
@@ -130,6 +178,16 @@ const PaymentTerms = () => {
             marginLeft: "2rem",
             textAlign: "left",
             alignItems: "left",
+            "@media (max-width: 600px)": {
+              fontSize: "2rem",
+            },
+            "@media (max-width: 500px)": {
+              fontSize: "1.8rem",
+            },
+            "@media (max-width: 400px)": {
+              fontSize: "1rem",
+              marginLeft: "0.8rem"
+            },
           }}
         >
           $ 255 000.00
@@ -137,7 +195,7 @@ const PaymentTerms = () => {
         <ArrowDropDownOutlinedIcon 
         sx={{ color: "#FFF", fontSize: "2rem" }} 
         cursor="pointer"
-        
+
           onClick={handleOpen}
         />
       </Box>

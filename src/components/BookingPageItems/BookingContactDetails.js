@@ -17,6 +17,12 @@ const BookingContactDetails = () => {
         backgroundColor: "rgba(255, 255, 255, 0.25)",
         backdropFilter: "blur(5rem)",
         borderRadius: "2rem",
+        "@media (max-width: 700px)": {
+          width: "60vw",
+        },
+        "@media (max-width: 500px)": {
+          width: "70vw",
+        },
       }}
     >
       <Typography
@@ -25,6 +31,10 @@ const BookingContactDetails = () => {
           fontSize: "1.3rem",
           px: 4,
           alignItems: "flex-start",
+          "@media (max-width: 400px)": {
+            fontSize: "1.2rem",
+            textAlign: "center",
+          },
         }}
       >
         Contact Details
@@ -38,6 +48,9 @@ const BookingContactDetails = () => {
           width: "90%",
           px: 4,
           marginTop: "2vw",
+          "@media (max-width: 500px)": {
+            px:1,
+          },
         }}
       >
         <FormLabel sx={inputstyle} marginBottom={"0.5vw"}>
@@ -71,6 +84,9 @@ const BookingContactDetails = () => {
           width: "90%",
           px: 4,
           marginTop: "2vw",
+          "@media (max-width: 500px)": {
+            px:1,
+          },
         }}
       >
         <FormLabel sx={inputstyle} marginBottom={"0.5vw"}>
@@ -104,6 +120,9 @@ const BookingContactDetails = () => {
           width: "90%",
           px: 4,
           marginTop: "2vw",
+          "@media (max-width: 500px)": {
+            px:1,
+          },
         }}
       >
         <FormLabel sx={inputstyle} marginBottom={"0.5vw"}>
@@ -137,19 +156,15 @@ const BookingContactDetails = () => {
           width: "90%",
           px: 4,
           marginTop: "2vw",
+          "@media (max-width: 500px)": {
+            px:1,
+          },
         }}
       >
         <FormLabel sx={inputstyle} marginBottom={"0.5vw"}>
           Mobile Phone Number*
         </FormLabel>
-        <Box
-          sx={{
-            display: "flex",
-            flexDirection: "row",
-            justifyContent: "space-between",
-            width: "100%",
-          }}
-        >
+        
           {/* <Box
             sx={{
                 display: "flex",
@@ -179,19 +194,14 @@ const BookingContactDetails = () => {
           // helperText={firstNameErrorMessage}
         />
         </Box> */}
-          <Box
-            sx={{
-              display: "flex",
-              justifyContent: "space-between",
-            }}
-          >
+          
             <TextField
               id="phoneNumber"
               name="phoneNumber"
               type="text"
               label=""
               variant="outlined"
-              sx={{ ...smallTextStyle, width: "65%" }}
+              sx={smallTextStyle }
               // value={first_name}
               // error={!!formErrors.firstNameError}
               // helperText={formErrors.firstNameError}
@@ -202,8 +212,6 @@ const BookingContactDetails = () => {
               // error={!firstNameValid}
               // helperText={firstNameErrorMessage}
             />
-          </Box>
-        </Box>
       </Box>
       <Box
         sx={{
@@ -214,6 +222,9 @@ const BookingContactDetails = () => {
           width: "100%",
           px: 4,
           // marginTop: "2vw",
+          "@media (max-width: 500px)": {
+            px:1,
+          },
         }}
       >
         <Checkbox {...label} defaultChecked color="default" />
@@ -221,6 +232,15 @@ const BookingContactDetails = () => {
           sx={{
             color: "#FFF",
             fontSize: "0.8rem",
+            "@media (max-width: 600px)": {
+              fontSize: "0.75rem",
+            },
+            "@media (max-width: 500px)": {
+              fontSize: "0.7rem",
+            },
+            "@media (max-width: 400px)": {
+              fontSize: "0.6rem",
+            },
           }}
         >
           I want to receive a notification SMS.
@@ -233,6 +253,9 @@ const BookingContactDetails = () => {
           px: 4,
           marginTop: "2vw",
           alignItems: "flex-start",
+          "@media (max-width: 500px)": {
+            px:1,
+          },
         }}
       >
         Emergency Contact Information
@@ -246,6 +269,9 @@ const BookingContactDetails = () => {
           width: "90%",
           px: 4,
           marginTop: "2vw",
+          "@media (max-width: 500px)": {
+            px:1,
+          },
         }}
       >
         <FormLabel sx={inputstyle} marginBottom={"0.5vw"}>
@@ -279,6 +305,9 @@ const BookingContactDetails = () => {
           width: "90%",
           px: 4,
           marginTop: "2vw",
+          "@media (max-width: 500px)": {
+            px:1,
+          },
         }}
       >
         <FormLabel sx={inputstyle} marginBottom={"0.5vw"}>
@@ -312,6 +341,9 @@ const BookingContactDetails = () => {
           width: "100%",
           px: 4,
           // marginTop: "2vw",
+          "@media (max-width: 500px)": {
+            px:1,
+          },
         }}
       >
         <Checkbox {...label} defaultChecked color="default" />
@@ -319,6 +351,15 @@ const BookingContactDetails = () => {
           sx={{
             color: "#FFF",
             fontSize: "0.8rem",
+            "@media (max-width: 600px)": {
+              fontSize: "0.75rem",
+            },
+            "@media (max-width: 500px)": {
+              fontSize: "0.7rem",
+            },
+            "@media (max-width: 400px)": {
+              fontSize: "0.6rem",
+            },
           }}
         >
           Please remember my traveler information for future visits.
@@ -337,17 +378,20 @@ const inputstyle = {
 const smallTextStyle = {
   "& .MuiOutlinedInput-notchedOutline": {
     border: "2px solid rgba(255, 255, 255, 0.5)",
-
-    height: "40px",
+ 
+    height: "7vh",
     margin: "none",
     padding: "none",
     textAlign: "center",
     boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.25)",
     background: "rgba(255, 255, 255, 0.25)",
 
+    
+
     "&:hover fieldset": {
       borderColor: "grey",
     },
+   
   },
 
   "& .MuiOutlinedInput-input": {
@@ -356,8 +400,14 @@ const smallTextStyle = {
   },
 
   "& .MuiInputBase-root ": {
-    width: "35rem",
+    width: "45vw",
     height: "2.8rem",
+
+
+
+    "@media (max-width: 400px)": {
+      width: "55vw", 
+    },
   },
   "& .MuiFormControl-root": {
     padding: "0px 10px",

@@ -31,6 +31,11 @@ const PaymentMethod = () => {
           padding: "0 0rem 0 5rem",
           textAlign: "left",
           alignItems: "left",
+          "@media (max-width: 472px)": {
+            fontSize: "1.5rem",
+            textAlign: "center",
+            padding: "0 0rem 0 0rem",
+          },
         }}
       >
         Payment option
@@ -38,6 +43,12 @@ const PaymentMethod = () => {
       <Box
         sx={{
           margin: "0 5rem 0 5rem",
+          "@media (max-width: 650px)": {
+            margin: "0 1.5rem 0 1.5rem",
+          },
+          "@media (max-width: 450px)": {
+            margin: "0 1rem 0 1rem",
+          },
         }}
       >
         <Card
@@ -66,6 +77,15 @@ const PaymentMethod = () => {
                     color: "#FFF",
                     fontSize: "1rem",
                     marginLeft: "3rem",
+                    "@media (max-width: 600px)": {
+                      marginLeft: "1rem",
+                    },
+                    "@media (max-width: 500px)": {
+                      fontSize: "0.8rem",
+                    },
+                    "@media (max-width: 400px)": {
+                      fontSize: "0.7rem",
+                    },
                   }}
                 >
                   At Inter-Galaxy Travels, we've shattered the boundaries of
@@ -103,6 +123,12 @@ const PaymentMethod = () => {
           px: 1,
           marginTop: "2vw",
           padding: "0 0rem 0 5rem",
+          "@media (max-width: 650px)": {
+            padding: "0 1.5rem 0 1.5rem",
+          },
+          "@media (max-width: 450px)": {
+            padding: "0 1rem 0 1rem",
+          },
         }}
       >
         <Checkbox
@@ -117,6 +143,15 @@ const PaymentMethod = () => {
           sx={{
             color: "#FFF",
             fontSize: "1rem",
+            "@media (max-width: 600px)": {
+              fontSize: "0.9rem",
+            },
+            "@media (max-width: 500px)": {
+              fontSize: "0.8rem",
+            },
+            "@media (max-width: 400px)": {
+              fontSize: "0.7rem",
+            },
           }}
         >
           Please remember my payment information for future visits.
