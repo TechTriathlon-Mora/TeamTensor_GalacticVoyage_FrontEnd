@@ -8,7 +8,7 @@ const SearchPage= () => {
             <SearchPageItem />
         </SearchPageWrapper>
     );
-    }
+    };
 export default SearchPage;
 
 const SearchPageWrapper = styled.div`
