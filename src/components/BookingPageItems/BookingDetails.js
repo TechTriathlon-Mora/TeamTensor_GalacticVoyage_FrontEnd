@@ -38,6 +38,11 @@ const BookingDetails = () => {
           padding: "0 0rem 0 5rem",
           textAlign: "left",
           alignItems: "left",
+          "@media (max-width: 472px)": {
+            fontSize: "1.5rem",
+            textAlign: "center",
+            padding: "0 0rem 0 0rem",
+          },
         }}
       >
         Instructions
@@ -49,6 +54,13 @@ const BookingDetails = () => {
           borderRadius: "0.5rem",
           backgroundColor: "rgba(255, 255, 255, 0.05)",
           padding: "1rem",
+          "@media (max-width: 650px)": {
+            margin: "0 1.5rem 0 1.5rem",
+          },
+          "@media (max-width: 450px)": {
+                padding: "0 1rem 0 1rem",
+                margin: "0 1rem 0 1rem",
+              },
         }}
       >
         <Typography
@@ -62,6 +74,17 @@ const BookingDetails = () => {
             alignItems: "left",
             padding: "0 0rem 0 5rem",
             listStyleType: "decimal",
+            "@media (max-width: 500px)": {
+              fontSize: "0.9rem",
+            },
+            "@media (max-width: 450px)": {
+              fontSize: "0.8rem",
+              padding: "0 0rem 0 1rem",
+            },
+            "@media (max-width: 350px)": {
+                fontSize: "0.7rem",
+                padding: "0 0rem 0 0.8rem",
+              },
           }}
         >
           <li>Please fill in the form below to book your flight.</li>
@@ -103,6 +126,12 @@ const BookingDetails = () => {
               backgroundColor: "rgba(255, 255, 255, 0.25)",
               backdropFilter: "blur(5rem)",
               marginBottom: "1rem",
+              "@media (max-width: 700px)": {
+          width: "60vw",
+        },
+        "@media (max-width: 500px)": {
+          width: "70vw",
+        },
             }}
           >
             <Typography
@@ -116,7 +145,12 @@ const BookingDetails = () => {
             </Typography>
 
             <KeyboardArrowDownIcon
-              sx={{ color: "#FFB800", fontSize: "3rem" }}
+              sx={{ color: "#FFB800", 
+              fontSize: "3rem" ,
+              "@media (max-width: 500px)": {
+            fontSize: "2rem",
+          },
+              }}
               cursor="pointer"
               onClick={() => handleOpen(index, passengerTypes[index])}
             />
